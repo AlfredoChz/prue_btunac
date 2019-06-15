@@ -101,20 +101,20 @@
                 </div>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
-                        <li class="<?php echo !isset($_GET['q'])? 'active' :''?>"><a href="<?php echo web_root; ?>index.php">Home</a></li>
+                        <li class="<?php echo !isset($_GET['q'])? 'active' :''?>"><a href="<?php echo web_root; ?>index.php">Inicio</a></li>
                         <li class="dropdown">
-                          <a href="#" data-toggle="dropdown" class="dropdown-toggle">Job Search <b class="caret"></b></a>
+                          <a href="#" data-toggle="dropdown" class="dropdown-toggle">Busqueda de trabajo <b class="caret"></b></a>
                           <ul class="dropdown-menu">
-                              <li class="<?php  if(isset($_GET['q'])) { if($_GET['q']=='advancesearch'){ echo 'active'; }else{ echo ''; }}  ?>"><a href="<?php echo web_root; ?>index.php?q=advancesearch">Advance Search</a></li>
-                              <li><a href="<?php echo web_root; ?>index.php?q=search-company">Job By Company</a></li>
-                              <li><a href="<?php echo web_root; ?>index.php?q=search-function">Job By Function</a></li>
-                              <li><a href="<?php echo web_root; ?>index.php?q=search-jobtitle">Job By Title</a></li>
+                              <li class="<?php  if(isset($_GET['q'])) { if($_GET['q']=='advancesearch'){ echo 'active'; }else{ echo ''; }}  ?>"><a href="<?php echo web_root; ?>index.php?q=advancesearch">Busqueda avanzada</a></li>
+                              <li><a href="<?php echo web_root; ?>index.php?q=search-company">Trabajo por empresa</a></li>
+                              <li><a href="<?php echo web_root; ?>index.php?q=search-function">Trabajo por funcion</a></li>
+                              <li><a href="<?php echo web_root; ?>index.php?q=search-jobtitle">Trabajo por titulo</a></li>
                          <!--      <li><a href="#">Job for Women</a></li>
                               <li><a href="#">Job for Men</a></li> -->
                           </ul>
                        </li>
                       <li class="dropdown <?php  if(isset($_GET['q'])) { if($_GET['q']=='category'){ echo 'active'; }else{ echo ''; }}  ?>">
-                          <a href="#" data-toggle="dropdown" class="dropdown-toggle">Popular Jobs <b class="caret"></b></a>
+                          <a href="#" data-toggle="dropdown" class="dropdown-toggle">Trabajos populares <b class="caret"></b></a>
                           <ul class="dropdown-menu">
                             <?php
                             $sql = "SELECT * FROM `tblcategory` LIMIT 10";
@@ -143,10 +143,10 @@
                             ?>
                           </ul>
                        </li>
-                        <li class="<?php  if(isset($_GET['q'])) { if($_GET['q']=='company'){ echo 'active'; }else{ echo ''; }}  ?>"><a href="<?php echo web_root; ?>index.php?q=company">Company</a></li>
-                        <li class="<?php  if(isset($_GET['q'])) { if($_GET['q']=='hiring'){ echo 'active'; }else{ echo ''; }} ?>"><a href="<?php echo web_root; ?>index.php?q=hiring">Hiring Now</a></li>
-                        <li class="<?php  if(isset($_GET['q'])) { if($_GET['q']=='About'){ echo 'active'; }else{ echo ''; }}  ?>"><a href="<?php echo web_root; ?>index.php?q=About">About Us</a></li>
-                        <li class="<?php  if(isset($_GET['q'])) { if($_GET['q']=='Contact'){ echo 'active'; }else{ echo ''; }}  ?>"><a href="<?php echo web_root; ?>index.php?q=Contact">Contact</a></li>
+                        <li class="<?php  if(isset($_GET['q'])) { if($_GET['q']=='company'){ echo 'active'; }else{ echo ''; }}  ?>"><a href="<?php echo web_root; ?>index.php?q=company">Empresa</a></li>
+                        <li class="<?php  if(isset($_GET['q'])) { if($_GET['q']=='hiring'){ echo 'active'; }else{ echo ''; }} ?>"><a href="<?php echo web_root; ?>index.php?q=hiring">Contratando</a></li>
+                        <li class="<?php  if(isset($_GET['q'])) { if($_GET['q']=='About'){ echo 'active'; }else{ echo ''; }}  ?>"><a href="<?php echo web_root; ?>index.php?q=About">Sobre nosotros</a></li>
+                        <li class="<?php  if(isset($_GET['q'])) { if($_GET['q']=='Contact'){ echo 'active'; }else{ echo ''; }}  ?>"><a href="<?php echo web_root; ?>index.php?q=Contact">Contacto</a></li>
                     </ul>
                 </div>
             </div>
