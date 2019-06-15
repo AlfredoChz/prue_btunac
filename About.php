@@ -5,13 +5,18 @@
 		<div class="container">
 			<div class="row showcase-section">
 				<div class="col-md-6">
-					<img src="img/dev1.png" alt="showcase image">
+					<img src="img/Universidad_Nacional_de_Callao.jpg" width="100%" alt="showcase image">
 				</div>
+				<br>
 				<div class="col-md-6">
 					<div class="about-text">
-						<h3>Nuestra Historia</h3>
-						<p>Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Vivamus suscipit tortor eget felis porttitor volutpat. Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar.</p>
-						 <p>Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..</p>
+						<h3>¿Quienes Somos?</h3>
+						<p>
+						    La página Bolsa de Trabajo UNAC es un espacio para conocer las últimas ofertas de empleo a los estudiantes de Universidad Nacional del Callao.
+						</p>
+						<p>
+						    Nuestro objetivo es mejorar la inserción laboral de nuestros estudiantes y titulados de la UNAC.
+						</p>
 					</div>
 				</div>
 			</div>
@@ -24,21 +29,22 @@
 						
 						<div class="row">
 							<div class="col-md-4">
-								<!-- Heading and para -->
 								<div class="block-heading-two">
-									<h3><span>Why Choose Us?</span></h3>
+									<h3><span>¿Que ofrecemos?</span></h3>
 								</div>
-								<p>Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur. <br/><br/>Sed ut perspiciaatis iste natus error sit voluptatem probably haven't heard of them accusamus.</p>
+								<ul>
+								<li>Ofertas de empleo para perfiles universitaios y titulados.</li>
+                                <li>Orientación para postular a una oferta.</li>
+                                <li>Acceso a la oferta de empleo, prácticas profesionales, programas y eventos relacionados con el empleo.</li>
+                                </ul>
 							</div>
+							
 							<div class="col-md-4">
 								<div class="block-heading-two">
-									<h3><span>Our Solution</span></h3>
+									<h3><span>Nuestras Soluciones</span></h3>
 								</div>		
-								<!-- Accordion starts -->
 								<div class="panel-group" id="accordion-alt3">
-								 <!-- Panel. Use "panel-XXX" class for different colors. Replace "XXX" with color. -->
-								  <div class="panel">	
-									<!-- Panel heading -->
+								  <div class="panel">
 									 <div class="panel-heading">
 										<h4 class="panel-title">
 										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseOne-alt3">
@@ -47,7 +53,6 @@
 										</h4>
 									 </div>
 									 <div id="collapseOne-alt3" class="panel-collapse collapse">
-										<!-- Panel body -->
 										<div class="panel-body">
 										  Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
 										</div>
@@ -96,17 +101,16 @@
 									 </div>
 								  </div>
 								</div>
-								<!-- Accordion ends -->
 								
 							</div>
 							
+							
 							<div class="col-md-4">
 								<div class="block-heading-two">
-									<h3><span>Our Expertise</span></h3>
+									<h3><span>Nuestra experiencia</span></h3>
 								</div>								
 								<h6>Web Development</h6>
 								<div class="progress pb-sm">
-								  <!-- White color (progress-bar-white) -->
 								  <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
 									 <span class="sr-only">40% Complete (success)</span>
 								  </div>
@@ -132,7 +136,6 @@
 							</div>
 							
 						</div>
-						
 						 						
 						 
 						<br>
@@ -140,7 +143,7 @@
 				
 						<!-- Heading -->
 						<div class="block-heading-six">
-							<h4 class="bg-color">Our Team</h4>
+							<h3 class="bg-color">Equipo de trabajo</h3>
 						</div>
 						<br>
 						
@@ -148,49 +151,20 @@
 						
 						<div class="team-six">
 							<div class="row">
-								<div class="col-md-3 col-sm-6">
+								<div class="col-md-12 col-sm-6">
 									<!-- Team Member -->
 									<div class="team-member">
 										<!-- Image -->
 										<img class="img-responsive" src="img/team1.jpg" alt="">
 										<!-- Name -->
-										<h4>Johne Doe</h4>
-										<span class="deg">Creative</span> 
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<!-- Team Member -->
-									<div class="team-member">
-										<!-- Image -->
-										<img class="img-responsive" src="img/team2.jpg" alt="">
-										<!-- Name -->
-										<h4>Jennifer</h4>
-										<span class="deg">Programmer</span> 
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<!-- Team Member -->
-									<div class="team-member">
-										<!-- Image -->
-										<img class="img-responsive" src="img/team3.jpg" alt="">
-										<!-- Name -->
-										<h4>Christean</h4>
-										<span class="deg">CEO</span> 
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<!-- Team Member -->
-									<div class="team-member">
-										<!-- Image -->
-										<img class="img-responsive" src="img/team4.jpg" alt="">
-										<!-- Name -->
-										<h4>Kerinele rase</h4>
-										<span class="deg">Manager</span> 
+										<h4>OTIC</h4>
+										<span class="deg">Oficina de Tecnología de la Información y Comunicación</span> 
 									</div>
 								</div>
 							</div>
 						</div>
 						
+						<br>
 						<!-- Our team ends -->
 					  
 						
