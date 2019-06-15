@@ -10,7 +10,7 @@
 									<p>BETTY LOPEZ CHAPARRO</p>
 									<p>Telefono: 01-5593201</p>
 									<p>Email: bolsadetrabajo@unac.pe / blopez@unac.pe</p>
-									<p>Dirección: Av. Juan Pablo II N° 310 5to piso Bellavista Callao</p>
+									<p>Dirección: Av. Juan Pablo II N° 310 5to piso Bellavista Callao.</p>
                                 
 								</div>  
 							</div>
