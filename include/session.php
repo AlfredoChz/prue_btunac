@@ -370,7 +370,7 @@ switch ($setheader) {
     break;
 
   case 'contact' :
-      echo  $title="Contact Us";   
+      echo  $title="CONTACTANOS";   
     break;
   case 'single-item' :
       echo  $ $title="Products"  . (isset($subheader) ?  '  |  ' .$subheader: '' ); 

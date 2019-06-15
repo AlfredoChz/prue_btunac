@@ -17,6 +17,7 @@
 						<p>
 						    Nuestro objetivo es mejorar la inserción laboral de nuestros estudiantes y titulados de la UNAC.
 						</p>
+						<hr>
 					</div>
 				</div>
 			</div>
@@ -39,6 +40,7 @@
                                 </ul>
 							</div>
 							
+
 							<div class="col-md-4">
 								<div class="block-heading-two">
 									<h3><span>Nuestras Soluciones</span></h3>

@@ -12,7 +12,7 @@ switch ($view) {
 		$content='login.php';
 		break;
 	case 'company' :
-        $title="Company";
+        $title="EMPRESAS";
 		$content='company.php';
 		break;
 	case 'hiring' :
@@ -36,11 +36,11 @@ switch ($view) {
 		$content='register.php';
 		break;
 	case 'Contact' :
-        $title='Contact Us';
+        $title='CONTACTANOS';
 		$content='Contact.php';
 		break;
 	case 'About' :
-        $title='About Us';
+        $title='NOSOTROS';
 		$content='About.php';
 		break;
 	case 'advancesearch' :

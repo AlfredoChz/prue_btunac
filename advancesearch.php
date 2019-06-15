@@ -35,7 +35,7 @@
 							</div>  
 							<div class="row">
 								<div class="col-sm-12 search1">
-									<label class="col-sm-3">Compañía:</label>
+									<label class="col-sm-3">Empresa:</label>
 									<div class="col-sm-9">
 										<select class="form-control" name="COMPANY">
 											<option value="">Todas</option>
