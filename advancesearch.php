@@ -1,7 +1,7 @@
  
 <style type="text/css">
 #content {
-	min-height: 500px; 
+	min-height: 500px;   
 }
 #content .panel {
 	padding: 10px;
@@ -27,7 +27,7 @@
 						<div class="panel-body">
 							<div class="row">
 								<div class="col-sm-12 search1">
-									<label class="col-sm-3">SEARCH:</label>
+									<label class="col-sm-3">BUSCAR:</label>
 									<div class="col-sm-9">
 										<input class="form-control" type="" name="SEARCH" placeholder="Search For">
 									</div>
@@ -35,10 +35,10 @@
 							</div>  
 							<div class="row">
 								<div class="col-sm-12 search1">
-									<label class="col-sm-3">COMPANY:</label>
+									<label class="col-sm-3">EMPRESA:</label>
 									<div class="col-sm-9">
 										<select class="form-control" name="COMPANY">
-											<option value="">All</option>
+											<option value="">Todos</option>
 											<?php
 												$sql = "SELECT * FROM tblcompany";
 												$mydb->setQuery($sql);
@@ -53,10 +53,10 @@
 							</div>   
 							<div class="row">
 								<div class="col-sm-12 search1">
-									<label class="col-sm-3">FUNCTION:</label>
+									<label class="col-sm-3">PROFESION:</label>
 									<div class="col-sm-9">
 										<select class="form-control" name="CATEGORY">
-											<option value="">All</option>
+											<option value="">Todos</option>
 											<?php
 												$sql = "SELECT * FROM `tblcategory`";
 												$mydb->setQuery($sql);

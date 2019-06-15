@@ -2,12 +2,12 @@
     <div class="container content">    
      <p> <?php check_message();?></p>      
 		<form class="row form-horizontal span6  wow fadeInDown" action="process.php?action=register" method="POST">
-		<h2 class=" ">Personal Info</h2>
+		<h2 class=" ">Informacion Personal</h2>
 		<div class="row"> 
 			<div class="form-group">
 				<div class="col-md-8">
 				<label class="col-md-4 control-label" for=
-					"FNAME">Firstname:</label>
+					"FNAME">Nombres:</label>
 
 					<div class="col-md-8">
 					  <input name="JOBID" type="hidden" value="<?php echo $_GET['job'];?>">
@@ -20,7 +20,7 @@
 			<div class="form-group">
 				<div class="col-md-8">
 					<label class="col-md-4 control-label" for=
-					"LNAME">Lastname:</label>
+					"LNAME">Apellido Paterno:</label>
 
 					<div class="col-md-8">
 					  <input name="deptid" type="hidden" value="">
@@ -33,7 +33,7 @@
 			<div class="form-group">
 				<div class="col-md-8">
 					<label class="col-md-4 control-label" for=
-					"MNAME">Middle Name:</label>
+					"MNAME">Apellido Materno:</label>
 
 					<div class="col-md-8">
 					  <input name="deptid" type="hidden" value="">
@@ -48,7 +48,7 @@
 			<div class="form-group">
 				<div class="col-md-8">
 					<label class="col-md-4 control-label" for=
-					"ADDRESS">Address:</label>
+					"ADDRESS">Direccion:</label>
 
 					<div class="col-md-8">
 
@@ -61,18 +61,18 @@
 			<div class="form-group">
 				<div class="col-md-8">
 					<label class="col-md-4 control-label" for=
-					"Gender">Sex:</label>
+					"Gender">Sexo:</label>
 
 					<div class="col-md-8">
 					 <div class="col-lg-5">
 					    <div class="radio">
-					      <label><input checked id="optionsRadios1" checked="True" name="optionsRadios" type="radio" value="Female">Female</label>
+					      <label><input checked id="optionsRadios1" checked="True" name="optionsRadios" type="radio" value="Female">Femenino</label>
 					    </div>
 					  </div>
 
 					  <div class="col-lg-4">
 					    <div class="radio">
-					      <label><input id="optionsRadios2"   name="optionsRadios" type="radio" value="Male"> Male</label>
+					      <label><input id="optionsRadios2"   name="optionsRadios" type="radio" value="Male"> Masculino</label>
 					    </div>
 					  </div> 
 					 
@@ -84,12 +84,12 @@
 			  <div class="rows">
 			    <div class="col-md-8"> 
 			      <div class="col-md-4">
-			        <label class="col-lg-12 control-label">Date of Birth :</label>
+			        <label class="col-lg-12 control-label">Fecha de Nacimiento :</label>
 			      </div>
 
 			      <div class="col-lg-3">
 			        <select class="form-control input-sm" name="month">
-			          <option>Month</option>
+			          <option>Mes</option>
 			          <?php
 
 			             $mon = array('Jan' => 1 ,'Feb'=> 2,'Mar' => 3 ,'Apr'=> 4,'May' => 5 ,'Jun'=> 6,'Jul' => 7 ,'Aug'=> 8,'Sep' => 9 ,'Oct'=> 10,'Nov' => 11 ,'Dec'=> 8 );    
@@ -106,7 +106,7 @@
 
 			      <div class="col-lg-2">
 			        <select class="form-control input-sm" name="day">
-			          <option>Day</option>
+			          <option>Dia</option>
 			        <?php 
 			          $d = range(31, 1);
 			          foreach ($d as $day) {
@@ -120,7 +120,7 @@
 
 			      <div class="col-lg-3">
 			        <select class="form-control input-sm" name="year">
-			          <option>Year</option>
+			          <option>Año</option>
 			        <?php 
 			          $years = range(2010, 1900);
 			          foreach ($years as $yr) {
@@ -138,7 +138,7 @@
 			 <div class="form-group">
 			    <div class="col-md-8">
 			      <label class="col-md-4 control-label" for=
-			      "BIRTHPLACE">Place of Birth:</label>
+			      "BIRTHPLACE">Lugar de Nacimiento:</label>
 
 			      <div class="col-md-8">
 			        
@@ -152,7 +152,7 @@
 			 <div class="form-group">
 			  <div class="col-md-8">
 			    <label class="col-md-4 control-label" for=
-			    "TELNO">Contact No.:</label>
+			    "TELNO">Telefono:</label>
 
 			    <div class="col-md-8">
 			      
@@ -165,14 +165,14 @@
 			 <div class="form-group">
 			  <div class="col-md-8">
 			    <label class="col-md-4 control-label" for=
-			    "CIVILSTATUS">Civil Status:</label>
+			    "CIVILSTATUS">Estado Civil:</label>
 
 			    <div class="col-md-8">
 			      <select class="form-control input-sm" name="CIVILSTATUS" id="CIVILSTATUS">
-			          <option value="none" >Select</option>
-			          <option value="Single">Single</option>
-			          <option value="Married">Married</option>
-			          <option value="Widow" >Widow</option>
+			          <option value="none" >Seleccionar</option>
+			          <option value="Single">Soltero</option>
+			          <option value="Married">Casado</option>
+			          <option value="Widow" >Viudo</option>
 			          <!-- <option value="Fourth" >Fourth</option> -->
 			      </select> 
 			    </div>
@@ -182,7 +182,7 @@
 			 <div class="form-group">
 			  <div class="col-md-8">
 			    <label class="col-md-4 control-label" for=
-			    "EMAILADDRESS">Email Address:</label> 
+			    "EMAILADDRESS">Correo Electronico:</label> 
 			    <div class="col-md-8">
 			       <input type="Email" class="form-control input-sm" id="EMAILADDRESS" name="EMAILADDRESS" placeholder="Email Address"   autocomplete="false"/> 
 			    </div>
@@ -191,7 +191,7 @@
 			<div class="form-group">
 			  <div class="col-md-8">
 			    <label class="col-md-4 control-label" for=
-			    "USERNAME">Username:</label>
+			    "USERNAME">Nombre de Usuario:</label>
 
 			    <div class="col-md-8">
 			      <input name="deptid" type="hidden" value="">
@@ -204,7 +204,7 @@
 			<div class="form-group">
 			  <div class="col-md-8">
 			    <label class="col-md-4 control-label" for=
-			    "PASS">Password:</label>
+			    "PASS">Contraseña:</label>
 
 			    <div class="col-md-8">
 			      <input name="deptid" type="hidden" value="">
@@ -218,7 +218,7 @@
 			<div class="form-group">
 			  <div class="col-md-8">
 			    <label class="col-md-4 control-label" for=
-			    "DEGREE">Educational Attainment:</label>
+			    "DEGREE">Logro Educativo:</label>
 
 			    <div class="col-md-8">
 			      <input name="deptid" type="hidden" value="">
@@ -233,7 +233,7 @@
 			      ""></label>  
 
 			      <div class="col-md-8"> 
-			      		<label><input type="checkbox"> By Sign up you are agree with our <a href="#">terms and condition</a></label>
+			      		<label><input type="checkbox"> Aceptar nuestros <a href="#">Terminos y Condiciones</a></label>
 			     </div>
 			    </div>
 			</div>    
@@ -243,7 +243,7 @@
 			      "idno"></label>  
 
 			      <div class="col-md-8">
-			         <button class="btn btn-primary btn-sm" name="btnRegister" type="submit" ><span class="fa fa-save fw-fa"></span> Save</button> 
+			         <button class="btn btn-primary btn-sm" name="btnRegister" type="submit" ><span class="fa fa-save fw-fa"></span> Registrarse</button> 
 			     
 			     </div>
 			    </div>

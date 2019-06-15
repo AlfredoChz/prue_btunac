@@ -21,7 +21,7 @@
               </li>
             </ul>
         </div>
-  <!-- end slider -->
+  <!-- end slider --> 
  
   </section> 
   <section id="call-to-action-2">

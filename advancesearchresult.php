@@ -1,4 +1,4 @@
-<?php 
+<?php   
 	$searchfor = (isset($_GET['searchfor']) && $_GET['searchfor'] != '') ? $_GET['searchfor'] : '';
 	
 ?>
@@ -129,20 +129,20 @@ body {
 								switch ($searchfor) {
 									case 'bycompany':
 										# code...
-									echo 'Result : '  . $search . ' | Company : ' . $company;
+									echo 'Resultado : '  . $search . ' | Empresa : ' . $company;
 										break;
 									case 'advancesearch':
 										# code... 
-									echo 'Result : '  . $search . ' | Company : ' . $company . ' | Function : ' . $category; 
+									echo 'Resultado : '  . $search . ' | Empresa : ' . $company . ' | Profesion : ' . $category; 
 									    break;
 									case 'byfunction':
 										# code... 
-									echo 'Result : '  . $search . ' | Function : ' . $category; 
+									echo 'Resultado : '  . $search . ' | Profesion : ' . $category; 
 									    break;
 
 									case 'bytitle':
 										# code... 
-									echo 'Result : '  . $search; 
+									echo 'Resultado : '  . $search; 
 									    break;
 									
 									default:
@@ -195,7 +195,7 @@ body {
 										</td>
 									</tr>
 								<?php } }else {
-									echo '<tr><td>No result found!.....</td></tr>';
+									echo '<tr><td>No hay resultados econtrados.....</td></tr>';
 
 								}?>
 								 

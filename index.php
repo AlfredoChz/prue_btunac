@@ -4,7 +4,7 @@ $content='home.php';
 $view = (isset($_GET['q']) && $_GET['q'] != '') ? $_GET['q'] : '';
 switch ($view) {
 	case 'apply' :
-        $title="Submit Application";
+        $title="Postular";
 		$content='applicationform.php';
 		break;
 	case 'login' :
@@ -12,19 +12,19 @@ switch ($view) {
 		$content='login.php';
 		break;
 	case 'company' :
-        $title="Company";
+        $title="Empresa";
 		$content='company.php';
 		break;
 	case 'hiring' :
-		$title = isset($_GET['search']) ? 'Hiring in '.$_GET['search'] :"Hiring";
+		$title = isset($_GET['search']) ? 'Hiring in '.$_GET['search'] :"Ofertas";
 		$content='hirring.php';
 		break;
 	case 'category' :
-        $title='Search for '. $_GET['search'];
+        $title='Busqueda por '. $_GET['search'];
 		$content='category.php';
 		break;
 	case 'viewjob' :
-        $title="Job Details";
+        $title="Detalles del Trabajo";
 		$content='viewjob.php';
 		break;
 	case 'success' :
@@ -32,36 +32,36 @@ switch ($view) {
 		$content='success.php';
 		break;
 	case 'register' :
-        $title="Register New Member";
+        $title="Registrate";
 		$content='register.php';
 		break;
 	case 'Contact' :
-        $title='Contact Us';
+        $title='Contactanos';
 		$content='Contact.php';
 		break;
 	case 'About' :
-        $title='About Us';
+        $title='Acerca de Nosotros';
 		$content='About.php';
 		break;
 	case 'advancesearch' :
-        $title='Advance Search';
+        $title='Busqueda Avanzada';
 		$content='advancesearch.php';
-		break;
+		break; 
 
 	case 'result' :
-        $title='Advance Search';
+        $title='Busqueda Avanzada';
 		$content='advancesearchresult.php';
 		break;
 	case 'search-company' :
-        $title='Search by Company';
+        $title='Busqueda por Empresa';
 		$content='searchbycompany.php';
 		break;
 	case 'search-function' :
-        $title='Search by Function';
+        $title='Busqueda por Profesion';
 		$content='searchbyfunction.php';
 		break;
 	case 'search-jobtitle' :
-        $title='Search by Job Title';
+        $title='Busqueda por Titulo';
 		$content='searchbytitle.php';
 		break;
 	default :
