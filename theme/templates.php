@@ -61,7 +61,7 @@
           <div class="container">
             <div class="row">
               <div class="col-md-12">
-                <p class="pull-left hidden-xs"><i class="fa fa-phone"></i>Tel No. (+001) 123-456-789</p>
+                <p class="pull-left hidden-xs"><i class="fa fa-phone"></i>Tel No. 429-6609 / 429-9899</p>
                 <?php if (isset($_SESSION['APPLICANTID'])) {
 
                     $sql = "SELECT count(*) as 'COUNTNOTIF' FROM `tbljob` ORDER BY `DATEPOSTED` DESC";
@@ -78,7 +78,7 @@
                     $showMsg = $mydb->loadSingleResult();
                     $msg =isset($showMsg->COUNT) ? $showMsg->COUNT : 0;
 
-                    echo ' <p class="pull-right login"><a title="View Notification(s)" href="'.web_root.'applicant/index.php?view=notification"> <i class="fa fa-bell-o"></i> <span class="label label-success">'.$notif.'</span></a> | <a title="View Message(s)" href="'.web_root.'applicant/index.php?view=message"> <i class="fa fa-envelope-o"></i> <span class="label label-success">'.$msg.'</span></a> | <a title="View Profile" href="'.web_root.'applicant/"> <i class="fa fa-user"></i> Howdy, '. $appl->FNAME. ' '.$appl->LNAME .' </a> | <a href="'.web_root.'logout.php">  <i class="fa fa-sign-out"> </i>Logout</a> </p>';
+                    echo ' <p class="pull-right login"><a title="Ver Notificacion(s)" href="'.web_root.'applicant/index.php?view=notification"> <i class="fa fa-bell-o"></i> <span class="label label-success">'.$notif.'</span></a> | <a title="Ver Mensaje(s)" href="'.web_root.'applicant/index.php?view=message"> <i class="fa fa-envelope-o"></i> <span class="label label-success">'.$msg.'</span></a> | <a title="Ver Perfil" href="'.web_root.'applicant/"> <i class="fa fa-user"></i> Alumno, '. $appl->FNAME. ' '.$appl->LNAME .' </a> | <a href="'.web_root.'logout.php">  <i class="fa fa-sign-out"> </i>Logout</a> </p>';
 
                     }else{ ?>
                       <p   class="pull-right login"><a data-target="#myModal" data-toggle="modal" href=""> <i class="fa fa-lock"></i> Login </a></p>
@@ -107,14 +107,14 @@
                           <ul class="dropdown-menu">
                               <li class="<?php  if(isset($_GET['q'])) { if($_GET['q']=='advancesearch'){ echo 'active'; }else{ echo ''; }}  ?>"><a href="<?php echo web_root; ?>index.php?q=advancesearch">Busqueda Avanzada</a></li>
                               <li><a href="<?php echo web_root; ?>index.php?q=search-company">Trabajo por Empresa</a></li>
-                              <li><a href="<?php echo web_root; ?>index.php?q=search-function">Trabajo por Carrera</a></li>
-                              <li><a href="<?php echo web_root; ?>index.php?q=search-jobtitle">Trabajo por Titulo</a></li>
+                              <li><a href="<?php echo web_root; ?>index.php?q=search-function">Trabajo por Profesion</a></li>
+                              <li><a href="<?php echo web_root; ?>index.php?q=search-jobtitle">Trabajo por Especialidad</a></li>
                          <!--      <li><a href="#">Job for Women</a></li>
                               <li><a href="#">Job for Men</a></li> -->
                           </ul>
                        </li>
                       <li class="dropdown <?php  if(isset($_GET['q'])) { if($_GET['q']=='category'){ echo 'active'; }else{ echo ''; }}  ?>">
-                          <a href="#" data-toggle="dropdown" class="dropdown-toggle">Trabajos Populares<b class="caret"></b></a>
+                          <a href="#" data-toggle="dropdown" class="dropdown-toggle">Profesiones  Populares<b class="caret"></b></a>
                           <ul class="dropdown-menu">
                             <?php
                             $sql = "SELECT * FROM `tblcategory` LIMIT 10";

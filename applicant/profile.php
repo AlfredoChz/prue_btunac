@@ -19,7 +19,7 @@
   <div class="container">
       <div class="row">
           <div class="col-lg-12">
-              <h2 class="pageTitle">Profile</h2>
+              <h2 class="pageTitle">Perfil</h2>
           </div>
       </div>
   </div>
@@ -38,11 +38,11 @@
           <ul class="list-group">
        
          
-            <li class="list-group-item text-muted">Profile</li><!-- 
+            <li class="list-group-item text-muted">Perfil</li><!-- 
             <li class="list-group-item text-right"><span class="pull-left"><strong>Joined</strong></span> 2.13.2014</li>
             <li class="list-group-item text-right"><span class="pull-left"><strong>Last seen</strong></span> Yesterday</li> -->
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Real Name</strong></span> 
-             <?php echo $applicant->FNAME .' '.substr($applicant->MNAME, 1,2).'. '.$applicant->LNAME; ?> 
+            <li class="list-group-item text-right"><span class="pull-left"><strong>Nombres</strong></span> 
+             <?php echo $applicant->FNAME .' '.$applicant->LNAME; ?> 
              </li>
             
           </ul> 
@@ -52,10 +52,10 @@
           <div class="box box-solid">  
             <div class="box-body no-padding">
               <ul class="nav nav-pills nav-stacked"> 
-                <li class="<?php echo ($view=='appliedjobs' || $view=='') ? 'active': '';?>"><a href="<?php echo web_root.'applicant/index.php?view=appliedjobs'; ?>"><i class="fa fa-list"></i> Applied Jobs
+                <li class="<?php echo ($view=='appliedjobs' || $view=='') ? 'active': '';?>"><a href="<?php echo web_root.'applicant/index.php?view=appliedjobs'; ?>"><i class="fa fa-list"></i> Trabajos Postulados
                    </a></li>
-                  <li class="<?php echo ($view=='accounts') ? 'active': '';?>"><a href="<?php echo web_root.'applicant/index.php?view=accounts'; ?>"><i class="fa fa-user"></i> Accounts </a></li>
-                <li class="<?php echo ($view=='message') ? 'active': '';?>"><a href="<?php echo web_root.'applicant/index.php?view=message'; ?>"><i class="fa fa-envelope-o"></i> Messages
+                  <li class="<?php echo ($view=='accounts') ? 'active': '';?>"><a href="<?php echo web_root.'applicant/index.php?view=accounts'; ?>"><i class="fa fa-user"></i> Cuenta </a></li>
+                <li class="<?php echo ($view=='message') ? 'active': '';?>"><a href="<?php echo web_root.'applicant/index.php?view=message'; ?>"><i class="fa fa-envelope-o"></i> Mensajes
                   <span class="label label-success pull-right"><?php echo isset($showMsg->COUNT) ? $showMsg->COUNT : 0;?></span></a></li>
               <!--      <li class="<?php echo ($view=='notification') ? 'active': '';?>"><a href="<?php echo web_root.'applicant/index.php?view=notification'; ?>"><i class="fa fa-bell-o"></i> Notification
                   <span class="label label-success pull-right"><?php echo $notif; ?></span></a></li> -->
@@ -109,7 +109,7 @@
         break;
       case 'accounts':
         # code...
-        // require_once("accounts.php");
+        require_once("accounts.php");
         break;
       
       default:

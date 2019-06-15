@@ -10,14 +10,14 @@
 <form class="form-horizontal" method="POST" action="controller.php?action=edit">  
       <div class="container">  
             <div class="box-header with-border">
-              <h3 class="box-title">Accounts</h3>
+              <h3 class="box-title">Cuenta</h3>
  
               <!-- /.box-tools -->
             </div> 
               <div class="form-group">
                 <div class="col-md-11">
                 <label class="col-md-4 control-label" for=
-                  "FNAME">Firstname:</label>
+                  "FNAME">Nombres:</label>
 
                   <div class="col-md-8">
                     <input name="JOBID" type="hidden" value="<?php echo $_GET['job'];?>">
@@ -30,7 +30,7 @@
               <div class="form-group">
                 <div class="col-md-11">
                   <label class="col-md-4 control-label" for=
-                  "LNAME">Lastname:</label>
+                  "LNAME">Apellido Paterno:</label>
 
                   <div class="col-md-8"> 
                     <input  class="form-control input-sm" id="LNAME" name="LNAME" placeholder=
@@ -42,7 +42,7 @@
               <div class="form-group">
                 <div class="col-md-11">
                   <label class="col-md-4 control-label" for=
-                  "MNAME">Middle Name:</label>
+                  "MNAME">Apellido Materno:</label>
 
                   <div class="col-md-8"> 
                     <input  class="form-control input-sm" id="MNAME" name="MNAME" placeholder=
@@ -54,7 +54,7 @@
               <div class="form-group">
                 <div class="col-md-11">
                   <label class="col-md-4 control-label" for=
-                  "ADDRESS">Address:</label>
+                  "ADDRESS">Direccion:</label>
 
                   <div class="col-md-8">
 
@@ -67,18 +67,18 @@
               <div class="form-group">
                 <div class="col-md-11">
                   <label class="col-md-4 control-label" for=
-                  "Gender">Sex:</label>
+                  "Gender">Sexo:</label>
 
                   <div class="col-md-8">
                    <div class="col-lg-5">
                       <div class="radio">
-                        <label><input checked id="optionsRadios1" checked="True" name="optionsRadios" type="radio" value="Female">Female</label>
+                        <label><input checked id="optionsRadios1" checked="True" name="optionsRadios" type="radio" value="Female">Femenino</label>
                       </div>
                     </div>
 
                     <div class="col-lg-4">
                       <div class="radio">
-                        <label><input id="optionsRadios2"   name="optionsRadios" type="radio" value="Male"> Male</label>
+                        <label><input id="optionsRadios2"   name="optionsRadios" type="radio" value="Male"> Masculino</label>
                       </div>
                     </div> 
                    
@@ -89,7 +89,7 @@
                <div class="form-group">
                 <div class="col-md-11">
                   <label class="col-md-4 control-label" for=
-                  "BIRTHDATE">Date of Birth:</label>
+                  "BIRTHDATE">Fecha de Nacimiento:</label>
 
                   <div class="col-md-8">
                     <div class="input-group">
@@ -105,7 +105,7 @@
                <div class="form-group">
                   <div class="col-md-11">
                     <label class="col-md-4 control-label" for=
-                    "BIRTHPLACE">Place of Birth:</label>
+                    "BIRTHPLACE">Lugar de Nacimiento:</label>
 
                     <div class="col-md-8">
                       
@@ -119,7 +119,7 @@
                <div class="form-group">
                 <div class="col-md-11">
                   <label class="col-md-4 control-label" for=
-                  "TELNO">Contact No.:</label>
+                  "TELNO">Numero de Contacto:</label>
 
                   <div class="col-md-8">
                     
@@ -132,14 +132,14 @@
                <div class="form-group">
                 <div class="col-md-11">
                   <label class="col-md-4 control-label" for=
-                  "CIVILSTATUS">Civil Status:</label>
+                  "CIVILSTATUS">Estado Civil:</label>
 
                   <div class="col-md-8">
                     <select class="form-control input-sm" name="CIVILSTATUS" id="CIVILSTATUS">
-                        <option value="none" >Select</option>
-                        <option value="Single">Single</option>
-                        <option value="Married">Married</option>
-                        <option value="Widow" >Widow</option>
+                        <option value="none" >Seleccionar</option>
+                        <option value="Single">Soltero</option>
+                        <option value="Married">Casado</option>
+                        <option value="Widow" >Viudo</option>
                         <!-- <option value="Fourth" >Fourth</option> -->
                     </select> 
                   </div>
@@ -149,7 +149,7 @@
                <div class="form-group">
                 <div class="col-md-11">
                   <label class="col-md-4 control-label" for=
-                  "EMAILADDRESS">Email Address:</label> 
+                  "EMAILADDRESS">Correo Electronico:</label> 
                   <div class="col-md-8">
                      <input type="Email" class="form-control input-sm" id="EMAILADDRESS" name="EMAILADDRESS" placeholder="Email Address"   autocomplete="off" value="<?php echo $appl->EMAILADDRESS;?>" /> 
                   </div>
@@ -159,7 +159,7 @@
               <div class="form-group">
                 <div class="col-md-11">
                   <label class="col-md-4 control-label" for=
-                  "DEGREE">Educational Attainment:</label>
+                  "DEGREE">Logro Educativo:</label>
 
                   <div class="col-md-8"> 
                     <input  class="form-control input-sm" id="DEGREE" name="DEGREE" placeholder=
@@ -173,7 +173,7 @@
                   "submit"></label>
 
                   <div class="col-md-8">
-                     <button class="btn btn-primary btn-sm" name="submit" type="submit" ><span class="fa fa-save"></span> Submit </button>
+                     <button class="btn btn-primary btn-sm" name="submit" type="submit" ><span class="fa fa-save"></span> Guardar </button>
                     </div>
                 </div>
               </div>  

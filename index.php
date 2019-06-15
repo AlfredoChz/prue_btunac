@@ -16,11 +16,11 @@ switch ($view) {
 		$content='company.php';
 		break;
 	case 'hiring' :
-		$title = isset($_GET['search']) ? 'Hiring in '.$_GET['search'] :"Ofertas";
+		$title = isset($_GET['search']) ? 'Ofertas en '.$_GET['search'] :"Ofertas";
 		$content='hirring.php';
 		break;
 	case 'category' :
-        $title='Busqueda por '. $_GET['search'];
+        $title='Buscando en '. $_GET['search'];
 		$content='category.php';
 		break;
 	case 'viewjob' :
@@ -61,7 +61,7 @@ switch ($view) {
 		$content='searchbyfunction.php';
 		break;
 	case 'search-jobtitle' :
-        $title='Busqueda por Titulo';
+        $title='Busqueda por Especialidad';
 		$content='searchbytitle.php';
 		break;
 	default :

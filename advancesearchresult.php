@@ -187,7 +187,7 @@ body {
 														<a href="index.php?q=viewjob&search=<?php echo $row->JOBID ?>">
 														<?php echo $row->OCCUPATIONTITLE; ?> 
 													    </a>
-														<span class="pull-right pagado">(Company <?php echo $row->COMPANYNAME ?>)</span>
+														<span class="pull-right pagado">(Empresa <?php echo $row->COMPANYNAME ?>)</span>
 													</h4>
 													<p class="summary"><?php echo $row->JOBDESCRIPTION; ?></p>
 												</div>

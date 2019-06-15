@@ -5,7 +5,7 @@
             
  <table id="dash-table" class="table table-hover">
      <thead>
-         <th>Especialidades</th>
+         <th>Especialidad</th>
          <th>Empresa</th>
          <th>Ubicacion</th>
          <th>Fecha del Post</th>
