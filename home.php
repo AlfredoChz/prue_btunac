@@ -148,9 +148,9 @@
                    <div class="panel-heading">
                     <h4 class="panel-title">
                       <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseOne-alt3">
-                      <i class="fa fa-angle-right"></i> <div class="" style="display:inline;">
-                        Capacitación a personas con discapacidad <br>&emsp;&emsp;&emsp;sobre temas de acceso laboral
-                      </div>
+                      <i class="fa fa-angle-right"></i> <p class="" style="display:inline;">
+                        Capacitación a personas con discapacidad 
+                      </p>
                       </a>
                     </h4>
                    </div>
@@ -165,9 +165,9 @@
                    <div class="panel-heading">
                     <h4 class="panel-title">
                       <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseTwo-alt3">
-                      <i class="fa fa-angle-right"></i> <div class="" style="display:inline;">
-                      MTPE: mercado laboral requiere más <br>&emsp;&emsp;&emsp;técnicos que universitarios
-                      </div>
+                      <i class="fa fa-angle-right"></i> <p class="" style="display:inline;">
+                      Mercado laboral requiere más técnicos
+                      </p>
                       </a>
                     </h4>
                    </div>
@@ -181,8 +181,8 @@
                    <div class="panel-heading">
                     <h4 class="panel-title">
                       <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseThree-alt3">
-                      <i class="fa fa-angle-right"></i><div class="" style="display:inline;"> Empresas creadas por mujeres en 2019
-                      </div>
+                      <i class="fa fa-angle-right"></i><p class="" style="display:inline;"> Empresas creadas por mujeres en 2019
+                      </p>
                       </a>
                     </h4>
                    </div>
@@ -196,8 +196,8 @@
                    <div class="panel-heading">
                     <h4 class="panel-title">
                       <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseFour-alt3">
-                      <i class="fa fa-angle-right"></i><div class="" style="display:inline;"> Mujeres lideran el 52,9% de empresas <br>&emsp;&emsp;&emsp;creadas en el 2019
-                      </div>
+                      <i class="fa fa-angle-right"></i><p class="" style="display:inline;"> Mujeres lideran el 52,9% de empresas 
+                      </p>
                       </a>
                     </h4>
                    </div>
