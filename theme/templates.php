@@ -108,7 +108,7 @@
                               <li class="<?php  if(isset($_GET['q'])) { if($_GET['q']=='advancesearch'){ echo 'active'; }else{ echo ''; }}  ?>"><a href="<?php echo web_root; ?>index.php?q=advancesearch">BUSCAR OFERTA</a></li>
                               <li><a href="<?php echo web_root; ?>index.php?q=search-company">Oferta por Empresa</a></li>
                               <li><a href="<?php echo web_root; ?>index.php?q=search-function">Oferta por Función</a></li>
-                              <li><a href="<?php echo web_root; ?>index.php?q=search-jobtitle">Oferta por Título</a></li>
+                              <li><a href="<?php echo web_root; ?>index.php?q=search-jobtitle">Oferta por Especialidad</a></li>
                          <!--      <li><a href="#">Job for Women</a></li>
                               <li><a href="#">Job for Men</a></li> -->
                           </ul>
