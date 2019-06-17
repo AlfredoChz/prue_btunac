@@ -10,7 +10,7 @@ class Company {
 	}
 	function listofcompany(){
 		global $mydb;
-		$mydb->setQuery("SELECT * FROM ".self::$tblname);
+		$cur = $mydb->setQuery("SELECT * FROM ".self::$tblname);
 		return $cur;
 	}
 	 
@@ -119,7 +119,26 @@ class Company {
 		  
 			if(!$mydb->executeQuery()) return false; 	
 	
-	}	
+	}
+	public static function companyAuthentication($U_USERNAME,$h_pass)
+    {
+        global $mydb;
+        $mydb->setQuery("SELECT * FROM `tblcompany` WHERE `COMPANYRUC`='".$U_USERNAME."' AND `COMPANYPASS`='".$h_pass."'");
+        $cur = $mydb->executeQuery();
+        if($cur==false){
+            die(mysql_error());
+        }
+        $row_count = $mydb->num_rows($cur);//get the number of count
+        if ($row_count == 1){
+            $emp_found = $mydb->loadSingleResult();
+            $_SESSION['COMPANYID']   		= $emp_found->COMPANYID;
+            $_SESSION['USERNAME'] 			= $emp_found->COMPANYRUC;
+            $_SESSION['COMPANYNAME']                   = $emp_found->COMPANYNAME;
+            return true;
+        }else{
+            return false;
+        }
+    }
 
 
 }

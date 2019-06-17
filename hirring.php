@@ -5,10 +5,10 @@
             
  <table id="dash-table" class="table table-hover">
      <thead>
-         <th>Job Title</th>
-         <th>Company</th>
-         <th>Location</th>
-         <th>Date Posted</th>
+         <th>Título de Empleo</th>
+         <th>Empresa</th>
+         <th>Lugar</th>
+         <th>Fecha de Publicación</th>
      </thead>
      <tbody>
         <?php

@@ -11,9 +11,9 @@ require_once 'include/initialize.php';
  //          mysql_query($sql) or die(mysql_error());
 
 // 2. Unset all the session variables
-unset($_SESSION['APPLICANTID']);
+unset($_SESSION['COMPANYID']);
 unset($_SESSION['USERNAME']);    
 // 4. Destroy the session
-// session_destroy();
+ session_destroy();
 redirect(web_root."index.php");
 ?>

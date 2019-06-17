@@ -51,26 +51,26 @@
                             </ul>
                         </div> -->
                         <div class="col-sm-12">
-                            <p>Qualification/Work Experience :</p>
+                            <p>Requerimientos</p>
                              <ul style="list-style: none;"> 
                                 <li><?php echo $result->QUALIFICATION_WORKEXPERIENCE ;?></li> 
                             </ul> 
                         </div>
                         <div class="col-sm-12"> 
-                            <p>Job Description:</p>
+                            <p>Descripción de la vacante</p>
                             <ul style="list-style: none;"> 
                                  <li><?php echo $result->JOBDESCRIPTION ;?></li> 
                             </ul> 
                          </div>
                         <div class="col-sm-12">
-                            <p>Employer :  <?php echo  $result->COMPANYNAME ?></p>
-                            <p>Location :  <?php echo  $result->COMPANYADDRESS ?></p>  
+                            <p>Empresa:  <?php echo  $result->COMPANYNAME ?></p>
+                            <p>Lugar:  <?php echo  $result->COMPANYADDRESS ?></p>
                         </div>
                     </div>
-                    <div class="col-sm-2"> <a href="<?php echo web_root; ?>index.php?q=apply&job=<?php echo $result->JOBID;?>&view=personalinfo" class="btn btn-main btn-next-tab">Apply Now !</a></div>
+                    <div class="col-sm-2"> <a href="<?php echo web_root; ?>index.php?q=apply&job=<?php echo $result->JOBID;?>&view=personalinfo" class="btn btn-main btn-next-tab"><strong>Postular</strong></a></div>
                 </div> 
               <div class="panel-footer">
-                  Date Posted :  <?php echo date_format(date_create($result->DATEPOSTED),'M d, Y'); ?>
+                  Fecha de Publicación:  <?php echo date_format(date_create($result->DATEPOSTED),'M d, Y'); ?>
               </div>
           </div> 
 <?php  } ?>   

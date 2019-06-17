@@ -10,7 +10,7 @@ class Setting {
 	}
 	function listofsetting(){
 		global $mydb;
-		$mydb->setQuery("SELECT * FROM ".self::$tblname);
+		$cur = $mydb->setQuery("SELECT * FROM ".self::$tblname);
 		return $cur;
 	}
 	 

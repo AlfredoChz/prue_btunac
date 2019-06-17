@@ -44,13 +44,13 @@
   <div class="container">
         <div class="row">
       <div class="col-md-12">
-        <div class="aligncenter"><h2 class="aligncenter">Empresa</h2><!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus ovident, doloribus omnis minus temporibus perferendis nesciunt.. --></div>
+        <div class="aligncenter"><h2 class="aligncenter">Empresas Populares</h2><!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus ovident, doloribus omnis minus temporibus perferendis nesciunt.. --></div>
         <br/>
       </div>
     </div>
 
     <?php
-      $sql = "SELECT * FROM `tblcompany`";
+      $sql = "SELECT * FROM `tblcompany` LIMIT 3";
       $mydb->setQuery($sql);
       $comp = $mydb->loadResultList();
 
@@ -64,8 +64,8 @@
                 <div class="info-blocks-in">
                     <h3><?php echo $company->COMPANYNAME;?></h3>
                     <!-- <p><?php echo $company->COMPANYMISSION;?></p> -->
-                    <p>Address :<?php echo $company->COMPANYADDRESS;?></p>
-                    <p>Contact No. :<?php echo $company->COMPANYCONTACTNO;?></p>
+                    <p>Lugar: <?php echo $company->COMPANYADDRESS;?></p>
+                    <p>Telefono: <?php echo $company->COMPANYCONTACTNO;?></p>
                 </div>
             </div>
 
@@ -85,7 +85,7 @@
       <div class="row">
         <div class="col-md-12 ">
           <?php
-            $sql = "SELECT * FROM `tblcategory`";
+            $sql = "SELECT * FROM `tblcategory` limit 12";
             $mydb->setQuery($sql);
             $cur = $mydb->loadResultList();
 

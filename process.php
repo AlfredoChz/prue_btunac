@@ -5,11 +5,12 @@ switch ($action) {
 	case 'submitapplication' :
 	doSubmitApplication();
 	break;
-  
 	case 'register' :
 	doRegister();
 	break;  
-
+    case 'register_enterprise':
+    doRegisterEnterprise();
+    break;
 	case 'login' :
 	doLogin();
 	break; 
@@ -77,7 +78,6 @@ function doInsert($jobid=0,$fileid=0) {
 
 			$autonum = New Autonumber();
 			$auto = $autonum->set_autonumber('APPLICANT');
-			 
 			$applicant =New Applicants();
 			$applicant->APPLICANTID = date('Y').$auto->AUTO;
 			$applicant->FNAME = $_POST['FNAME'];
@@ -152,6 +152,55 @@ function doUpdate($jobid=0,$fileid=0) {
  
 	}
 }
+
+
+function doRegisterEnterprise()
+{
+    echo "gaaa";
+    if(isset($_POST['btnRegister']))
+    {
+        echo "conchatumare";
+        $servername = "localhost";
+        $username = "root";
+        $password = "prosor";
+        try {
+            $conn = new PDO("mysql:host=$servername;dbname=unac_bdt", $username, $password);
+            // set the PDO error mode to exception
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            echo "Connected successfully";
+            $operation = $conn->prepare("insert into tblcompany (COMPANYNAME, COMPANYADDRESS, COMPANYCONTACTNO,COMPANYSTATUS,  COMPANYEMAIL, COMPANYMANAGER, COMPANYRUC, COMPANYPASS) values (:companyname,:companyaddress,:companycontactno,:companystatus,:companyemail,:companymanager,:companyruc,:companypass)");
+            $data= [
+                "companyname"=>$_POST['N_EMPRESA'],
+                "companyaddress"=>$_POST['DIRECCION'],
+                "companycontactno"=>$_POST['TELNO'],
+                "companystatus"=>"WAITING",
+                "companyemail"=>$_POST['EMAIL'],
+                "companymanager"=>$_POST['P_RESPONSABLE'],
+                "companyruc"=>$_POST['RUC'],
+                "companypass"=>sha1('smashito')
+            ];
+            $operation->execute($data);
+        }
+        catch(PDOExceptio $e)
+        {
+            echo "Connection failed: " . $e->getMessage();
+        }
+
+
+        if($operation)
+        {
+            message("Empresa creada satisfactoriamente","success");
+            redirect(web_root."enterprise/");
+        }
+        else
+        {
+            message("Verifique los datos de entrada","error");
+            redirect(web_root."index.php?q=register_enterprise");
+        }
+        $conn=null;
+    }
+}
+
 function doRegister(){
 	global $mydb;
 	if (isset($_POST['btnRegister'])) { 
@@ -202,14 +251,18 @@ function doRegister(){
 
 function doLogin(){
 	
-	$email = trim($_POST['USERNAME']);
-	$upass  = trim($_POST['PASS']);
+	//$email = trim($_POST['USERNAME']);
+	$ruc_empresa = trim($_POST['USERNAME']);
+    $upass  = trim($_POST['PASS']);
 	$h_upass = sha1($upass);
  
   //it creates a new objects of member
-    $applicant = new Applicants();
-    //make use of the static function, and we passed to parameters
-    $res = $applicant->applicantAuthentication($email, $h_upass);
+    //$applicant = new Applicants();
+    //make use of the static boolean function, and we passed to parameters
+    $company  = new Company();
+    $res = $company->companyAuthentication($ruc_empresa,$h_upass);
+
+    //$res = $applicant->applicantAuthentication($email, $h_upass);
     if ($res==true) { 
 
        	message("You are now successfully login!","success");
@@ -217,10 +270,10 @@ function doLogin(){
        // $sql="INSERT INTO `tbllogs` (`USERID`,USERNAME, `LOGDATETIME`, `LOGROLE`, `LOGMODE`) 
        //    VALUES (".$_SESSION['USERID'].",'".$_SESSION['FULLNAME']."','".date('Y-m-d H:i:s')."','".$_SESSION['UROLE']."','Logged in')";
        //    mysql_query($sql) or die(mysql_error()); 
-         redirect(web_root."applicant/");
+         redirect(web_root);
      
     }else{
-    	 echo "Account does not exist! Please contact Administrator."; 
+    	 echo "La empresa ingresada no existe. Por favor póngase en contacto con el Administrador";
     } 
 }
  
@@ -245,7 +298,7 @@ function UploadImage($jobid=0){
 			// redirect(web_root."index.php?q=apply&job=".$jobid."&view=personalinfo");
 			// exit;
 		}
-} 
+}
 
 
 ?>

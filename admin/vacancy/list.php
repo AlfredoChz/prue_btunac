@@ -5,7 +5,7 @@
 ?>
 	<div class="row">
        	 <div class="col-lg-12">
-            <h1 class="page-header">List of Vacancies  <a href="index.php?view=add" class="btn btn-primary btn-xs  ">  <i class="fa fa-plus-circle fw-fa"></i> Add Job Vacancy</a>  </h1>
+            <h1 class="page-header">Vacantes <a href="index.php?view=add" class="btn btn-primary btn-xs  ">  <i class="fa fa-plus-circle fw-fa"></i> Add Job Vacancy</a>  </h1>
        		</div>
         	<!-- /.col-lg-12 -->
    		 </div>
@@ -17,12 +17,12 @@
 				  	<tr>
 
 				  		<!-- <th>No.</th> -->
-				  		<th>Company Name</th> 
-				  		<th>Occupation Title</th> 
-				  		<th>Require no. of Employees</th> 
-				  		<th>Salaries</th> 
+				  		<th>Nombre </th>
+				  		<th>Titulo Ocupacional </th>
+				  		<th>Numero de Vacantes </th>
+				  		<th>Salario</th>
 				  		<th>Duration of Employment</th> 
-				  		<th>Qualification/Work experience</th> 
+				  		<th>Experiencia</th>
 				  		<th>Job Description</th> 
 				  		<th>Prefered Sex</th> 
 				  		<th>Sector of Vacancy</th> 

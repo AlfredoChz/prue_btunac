@@ -33,6 +33,7 @@
 
   .contentbody p {
     font-weight: bold;
+    padding-left: 25px;
   }
   .login a:hover{
     color: #00bcd4;
@@ -80,9 +81,18 @@
 
                     echo ' <p class="pull-right login"><a title="View Notification(s)" href="'.web_root.'applicant/index.php?view=notification"> <i class="fa fa-bell-o"></i> <span class="label label-success">'.$notif.'</span></a> | <a title="View Message(s)" href="'.web_root.'applicant/index.php?view=message"> <i class="fa fa-envelope-o"></i> <span class="label label-success">'.$msg.'</span></a> | <a title="View Profile" href="'.web_root.'applicant/"> <i class="fa fa-user"></i> Howdy, '. $appl->FNAME. ' '.$appl->LNAME .' </a> | <a href="'.web_root.'logout.php">  <i class="fa fa-sign-out"> </i>Logout</a> </p>';
 
-                    }else{ ?>
-                      <p   class="pull-right login"><a data-target="#myModal" data-toggle="modal" href=""> <i class="fa fa-lock"></i> Login </a></p>
-                <?php } ?>
+                    }else
+                        if(isset($_SESSION['COMPANYID']))
+                        {
+
+                            $company = new Company();
+                            $comp  = $company->single_company($_SESSION['COMPANYID']);
+
+                            echo ' <p class="pull-right login"><a <a title="View Profile" href="'.web_root.'enterprise/"> <i class="fa fa-user"></i> Hola, '.$comp->COMPANYNAME .' </a> | <a href="'.web_root.'logout.php">  <i class="fa fa-sign-out"> </i>Salir</a> </p>';
+                        }else{?>
+                      <p   class="pull-right login"><a data-target="#myModal" data-toggle="modal" href=""> <i class="fa fa-lock"></i> Iniciar Sesión </a></p>
+                <?php }
+                        ?>
 
               </div>
             </div>
@@ -97,7 +107,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<?php echo web_root; ?>index.php">Website Name<!-- <img src="<?php echo web_root; ?>plugins/home-plugins/img/logo.png" alt="logo"/> --></a>
+                    <a class="navbar-brand" href="<?php echo web_root; ?>index.php">Bolsa de Trabajo - UNAC<!-- <img src="<?php echo web_root; ?>plugins/home-plugins/img/logo.png" alt="logo"/> --></a>
                 </div>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
@@ -144,9 +154,20 @@
                           </ul>
                        </li>
                         <li class="<?php  if(isset($_GET['q'])) { if($_GET['q']=='company'){ echo 'active'; }else{ echo ''; }}  ?>"><a href="<?php echo web_root; ?>index.php?q=company">Empresa</a></li>
+                        <?php if (!isset($_SESSION['COMPANYID'])){?>
                         <li class="<?php  if(isset($_GET['q'])) { if($_GET['q']=='hiring'){ echo 'active'; }else{ echo ''; }} ?>"><a href="<?php echo web_root; ?>index.php?q=hiring">Contratando</a></li>
+                        <?php } ?>
                         <li class="<?php  if(isset($_GET['q'])) { if($_GET['q']=='About'){ echo 'active'; }else{ echo ''; }}  ?>"><a href="<?php echo web_root; ?>index.php?q=About">Sobre nosotros</a></li>
-                        <li class="<?php  if(isset($_GET['q'])) { if($_GET['q']=='Contact'){ echo 'active'; }else{ echo ''; }}  ?>"><a href="<?php echo web_root; ?>index.php?q=Contact">Contacto</a></li>
+                        <?php if (!isset($_SESSION['COMPANYID'])){?>
+                            <li class="<?php  if(isset($_GET['q'])) { if($_GET['q']=='Contact'){ echo 'active'; }else{ echo ''; }}  ?>"><a href="<?php echo web_root; ?>index.php?q=Contact">Contacto</a></li>
+                        <?php } ?>
+
+                        <?php if (!isset($_SESSION['COMPANYID']) && !isset($_SESSION['APPLICANTID'])){?>
+                        <li class="<?php  if(isset($_GET['q'])) { if($_GET['q']=='register_enterprise'){ echo 'active'; }else{ echo ''; }}  ?>"><a href="<?php echo web_root; ?>index.php?q=register_enterprise">Regístrate</a></li>
+                        <?php } ?>
+                        <?php if(isset($_SESSION['COMPANYID'])){ ?>
+                        <li class="<?php  if(isset($_GET['q'])) { if($_GET['q']=='addJob'){ echo 'active'; }else{ echo ''; }}  ?>"><a href="<?php echo web_root; ?>index.php?q=addJob">Agregar Empleo</a></li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>

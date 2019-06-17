@@ -12,15 +12,15 @@ switch ($view) {
 		$content='login.php';
 		break;
 	case 'company' :
-        $title="Company";
+        $title="Empresas";
 		$content='company.php';
 		break;
 	case 'hiring' :
-		$title = isset($_GET['search']) ? 'Hiring in '.$_GET['search'] :"Hiring";
+		$title = isset($_GET['search']) ? $_GET['search'] :"Vacantes";
 		$content='hirring.php';
 		break;
 	case 'category' :
-        $title='Search for '. $_GET['search'];
+        $title='Vacantes para '. $_GET['search'];
 		$content='category.php';
 		break;
 	case 'viewjob' :
@@ -32,8 +32,12 @@ switch ($view) {
 		$content='success.php';
 		break;
 	case 'register' :
-        $title="Register New Member";
+        $title="Register member";
 		$content='register.php';
+		break;
+	case 'register_enterprise' :
+		$title="Registrar empresa";
+		$content='register_empresa.php';
 		break;
 	case 'Contact' :
         $title='Contact Us';
@@ -47,7 +51,6 @@ switch ($view) {
         $title='Advance Search';
 		$content='advancesearch.php';
 		break;
-
 	case 'result' :
         $title='Advance Search';
 		$content='advancesearchresult.php';
@@ -61,8 +64,16 @@ switch ($view) {
 		$content='searchbyfunction.php';
 		break;
 	case 'search-jobtitle' :
-        $title='Search by Job Title';
+        $title='Buscar por Trabajo';
 		$content='searchbytitle.php';
+		break;
+	case 'my-vacancys':
+		$title='Mis Ofertas';
+		$content ='my_vacancys.php';
+		break;
+	case 'addJob':
+		$title='Agregar Empleo';
+		$content='addJob.php';
 		break;
 	default :
 	    $active_home='active';

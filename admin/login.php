@@ -40,17 +40,17 @@ require_once("../include/initialize.php");
   </div> -->
   <!-- /.login-logo -->
   <div class="login-box-body" style="min-height: 400px;">
-    <h1 class="login-box-msg">Login to ERIS</h1>
+    <h1 class="login-box-msg">Portal Administrativo</h1>
     <hr/>
     <p><?php check_message(); ?></p>
 
     <form action="" method="post">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Username" name="user_email">
+        <input type="text" class="form-control" placeholder="Usuario" name="user_email">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password" name="user_pass">
+        <input type="password" class="form-control" placeholder="Contraseña" name="user_pass">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
         <div class="row">
@@ -63,7 +63,7 @@ require_once("../include/initialize.php");
         </div>   -->
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" name="btnLogin" class="btn btn-primary btn-block btn-flat">Sign In</button>
+          <button type="submit" name="btnLogin" class="btn btn-primary btn-block btn-flat">Ingresar</button>
         </div>
       </div>
         <!-- /.col -->
@@ -92,7 +92,8 @@ if(isset($_POST['btnLogin'])){
   $email = trim($_POST['user_email']);
   $upass  = trim($_POST['user_pass']);
   $h_upass = sha1($upass);
-  
+
+    /*Verifica el ingreso de datos*/
    if ($email == '' OR $upass == '') {
 
       message("Invalid Username and Password!", "error");
@@ -121,7 +122,13 @@ if(isset($_POST['btnLogin'])){
         unset($_SESSION['PICLOCATION']);
 
          redirect(web_root."admin/index.php");
-      // } 
+       //}
+
+       if($_SESSION['ROLE']=='Programmer'){
+           message("Lograste ingresar como programador, el web_root: ".web_root);
+           redirect(web_root."admin/login.php");
+       }
+
     }else{
       message("Account does not exist! Please contact Administrator.", "error");
        redirect(web_root."admin/login.php"); 
