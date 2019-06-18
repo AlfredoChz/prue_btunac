@@ -159,12 +159,12 @@
         </li> 
         <li class="<?php echo (currentpage() == 'company') ? "active" : false;?>" >
           <a href="<?php echo web_root ;?>admin/company/">
-            <i class="fa fa-building"></i> <span>Company</span> 
+            <i class="fa fa-building"></i> <span>Empresa</span> 
           </a>
         </li>
         <li class="<?php echo (currentpage() == 'vacancy') ? "active" : false;?>" >
           <a href="<?php echo web_root ;?>admin/vacancy/">
-            <i class="fa fa-suitcase"></i> <span>Vacancy</span> 
+            <i class="fa fa-suitcase"></i> <span>Vacante</span> 
           </a>
         </li>
         <li class="<?php echo (currentpage() == 'employee') ? "active" : false;?>" >
@@ -187,7 +187,7 @@
         </li> 
         <li class="<?php echo (currentpage() == 'category') ? "active" : false;?>" > 
           <a href="<?php echo web_root ;?>admin/category/">
-            <i class="fa fa-list"></i> <span>Category</span>  
+            <i class="fa fa-list"></i> <span>Categoría</span>  
           </a>
         </li> 
        <!--  <li class="treeview">
@@ -305,14 +305,41 @@
 
 <script>
   $(function () {
-    $("#dash-table").DataTable();
+    $("#dash-table").DataTable({
+      "language": {
+      "sProcessing":     "Procesando...",
+      "sLengthMenu":     "Mostrar _MENU_ registros",
+      "sZeroRecords":    "No se encontraron resultados",
+      "sEmptyTable":     "Ningún dato disponible en esta tabla",
+      "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+      "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+      "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+      "sInfoPostFix":    "",
+      "sSearch":         "Buscar:",
+      "sUrl":            "",
+      "sInfoThousands":  ",",
+      "sLoadingRecords": "Cargando...",
+      "oPaginate": {
+          "sFirst":    "Primero",
+          "sLast":     "Último",
+          "sNext":     "Siguiente",
+          "sPrevious": "Anterior"
+    },
+    "oAria": {
+        "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+        "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+    }
+    }
+    });
     $('#dash-table2').DataTable({
       "paging": true,
       "lengthChange": false,
       "searching": false,
       "ordering": true,
       "info": true,
-      "autoWidth": false
+      "autoWidth": false,
+  
+
     });
   });
 

@@ -8,7 +8,7 @@
         <div class="col-md-12">
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Applied Jobs</h3> 
+              <h3 class="box-title">Historial de Postulaciones</h3> 
               <!-- /.box-tools -->
             </div>
             <!-- /.box-header -->
@@ -17,15 +17,15 @@
                 <table id="dash-table" class="table table-hover table-striped">
                   <thead> 
                     <tr>
-                      <th>Job Title</th>
-                      <th>Company</th>
-                      <th>Location</th>
-                      <th>Status</th>
+                      <th>Especialidad</th>
+                      <th>Empresa</th>
+                      <th>Ubicacion</th>
+                      <th>Estado</th>
                     </tr>
                   </thead>
                   <tbody>
                     <?php 
-                      $sql="SELECT * FROM `tblcompany` c,`tbljobregistration` r, `tbljob` j WHERE c.`COMPANYID`=r.`COMPANYID` AND r.`JOBID`=j.`JOBID`";
+                      $sql="SELECT * FROM `tblcompany` c,`tbljobregistration` r, `tbljob` j WHERE c.`COMPANYID`=r.`COMPANYID` AND r.`JOBID`=j.`JOBID`AND r.APPLICANTID=".$_SESSION['APPLICANTID'];
                       $mydb->setQuery($sql);
                       $cur = $mydb->loadResultList();  
                       foreach ($cur as $result) {

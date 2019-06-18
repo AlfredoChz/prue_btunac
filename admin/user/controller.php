@@ -27,29 +27,64 @@ switch ($action) {
 	}
    
 	function doInsert(){
+
+		global $mydb;
+		global $mydbuser;
+
 		if(isset($_POST['save'])){
 
+			if ($_POST['U_USERNAME'] == "" OR $_POST['U_PASS'] == "") {
 
-		if ($_POST['U_NAME'] == "" OR $_POST['U_USERNAME'] == "" OR $_POST['U_PASS'] == "") {
-			$messageStats = false;
-			message("All field is required!","error");
-			redirect('index.php?view=add');
-		}else{	
-			$user = New User();
-			$user->USERID 			= $_POST['user_id'];
-			$user->FULLNAME 		= $_POST['U_NAME'];
-			$user->USERNAME			= $_POST['U_USERNAME'];
-			$user->PASS				=sha1($_POST['U_PASS']);
-			$user->ROLE				=  $_POST['U_ROLE'];
-			$user->create();
+				$messageStats = false;
+				message("All field is required!","error");
+				redirect('index.php?view=add');
 
-						$autonum = New Autonumber(); 
-						$autonum->auto_update('userid');
+			}else{	
 
-			message("The account [". $_POST['U_NAME'] ."] created successfully!", "success");
-			redirect("index.php");
-			
-		}
+				$birthdate =  $_POST['year'].'-'.$_POST['month'].'-'.$_POST['day'];
+
+				$age = date_diff(date_create($birthdate),date_create('today'))->y;
+
+				@$datehired = date_format(date_create($_POST['EMP_HIREDDATE']),'Y-m-d');
+
+				$user = new User();
+
+				$user->FULLNAME 		= $_POST['FNAME'];
+				$user->USERNAME			= $_POST['U_USERNAME'];
+				$user->PASS				=sha1($_POST['U_PASS']);
+				$user->TYPEUSERID		=  $_POST['U_ROLE'];
+				
+				$user->create();
+
+				$emp = new Employee(); 
+
+				//$emp->EMPLOYEEID 		= $_POST['EMPLOYEEID'];
+				$emp->FNAME				= $_POST['FNAME']; 
+				$emp->LNAME				= $_POST['LNAME'];
+				$emp->MNAME 	   		= $_POST['MNAME'];
+				$emp->ADDRESS			= $_POST['ADDRESS'];  
+				$emp->BIRTHDATE	 		= $birthdate;
+				$emp->BIRTHPLACE		= $_POST['BIRTHPLACE'];  
+				$emp->AGE			    = $age;
+				$emp->SEX 				= $_POST['optionsRadios']; 
+				$emp->TELNO				= $_POST['TELNO'];
+				$emp->CIVILSTATUS		= $_POST['CIVILSTATUS']; 
+				$emp->POSITION			= trim($_POST['POSITION']);
+				$emp->EMP_EMAILADDRESS	= $_POST['EMP_EMAILADDRESS'];
+				$emp->USERID			= $user->find_ultimouser();
+				$emp->DATEHIRED			=  @$datehired;
+				$emp->COMPANYID			= $_POST['COMPANYID'];
+				$emp->FACULTADID 		=$_POST['FACULTADID'];
+
+				$emp->create(); 
+
+				//$autonum = New Autonumber(); 
+				//$autonum->auto_update('userid');
+
+				message("The account [". $_POST['U_USERNAME'] ."] created successfully!", "success");
+				redirect("index.php");
+				
+			}
 		}
 
 	}
@@ -57,23 +92,48 @@ switch ($action) {
 	function doEdit(){
 	if(isset($_POST['save'])){
 
+				$birthdate =  $_POST['year'].'-'.$_POST['month'].'-'.$_POST['day'];
 
-			$user = New User(); 
-			$user->FULLNAME 		= $_POST['U_NAME'];
-			$user->USERNAME			= $_POST['U_USERNAME'];
-			$user->PASS				=sha1($_POST['U_PASS']);
-			$user->ROLE				= $_POST['U_ROLE'];
-			$user->update($_POST['USERID']);
+				$age = date_diff(date_create($birthdate),date_create('today'))->y;
 
-			
+				@$datehired = date_format(date_create($_POST['EMP_HIREDDATE']),'Y-m-d');
 
+				$user = new User();
+
+				$user->FULLNAME 		= $_POST['FNAME'];
+				$user->USERNAME			= $_POST['U_USERNAME'];
+				$user->PASS				=sha1($_POST['U_PASS']);
+				$user->TYPEUSERID		=  $_POST['U_ROLE'];
+				
+				$user->update($_POST['USERID']);
+
+				$emp = new Employee(); 
+
+				//$emp->EMPLOYEEID 		= $_POST['EMPLOYEEID'];
+				$emp->FNAME				= $_POST['FNAME']; 
+				$emp->LNAME				= $_POST['LNAME'];
+				$emp->MNAME 	   		= $_POST['MNAME'];
+				$emp->ADDRESS			= $_POST['ADDRESS'];  
+				$emp->BIRTHDATE	 		= $birthdate;
+				$emp->BIRTHPLACE		= $_POST['BIRTHPLACE'];  
+				$emp->AGE			    = $age;
+				$emp->SEX 				= $_POST['optionsRadios']; 
+				$emp->TELNO				= $_POST['TELNO'];
+				$emp->CIVILSTATUS		= $_POST['CIVILSTATUS']; 
+				$emp->POSITION			= trim($_POST['POSITION']);
+				$emp->EMP_EMAILADDRESS	= $_POST['EMP_EMAILADDRESS'];
+				$emp->DATEHIRED			=  @$datehired;
+				$emp->COMPANYID			= $_POST['COMPANYID'];
+				$emp->FACULTADID 		=$_POST['FACULTADID'];
+
+				$emp->update2($_POST['USERID']); 
 
 			if (isset($_GET['view'])) {
 				# code...
-				  message("Profile has been updated!", "success");
+				message("Perfil ha sido actualizado!", "success");
 				redirect("index.php?view=view");
 			}else{ 
-				message("[". $_POST['U_NAME'] ."] has been updated!", "success");
+				message("[". $_POST['U_USERNAME'] ."] has been updated!", "success");
 				redirect("index.php");
 			}
 		}
@@ -98,10 +158,14 @@ switch ($action) {
 		
 				$id = 	$_GET['id'];
 
+				$emp=new Employee();
+				$emp->delete2($id);
+
 				$user = New User();
 	 		 	$user->delete($id);
+
 			 
-			message("User has been deleted!","info");
+			message("Usuario ha sido borrado!","info");
 			redirect('index.php');
 		// }
 		// }

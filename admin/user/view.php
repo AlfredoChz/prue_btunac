@@ -43,7 +43,7 @@ if(!$_SESSION['ADMIN_ROLE']=='Administrator'){
                   <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "U_NAME">Name:</label>
+                      "U_NAME">Nombre :</label>
 
                       <div class="col-md-8">
                         <input name="deptid" type="hidden" value="">

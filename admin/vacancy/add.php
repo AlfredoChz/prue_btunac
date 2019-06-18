@@ -9,7 +9,7 @@
 
                 <div class="row">
                    <div class="col-lg-12">
-                      <h1 class="page-header">Add New Job Vacancy</h1>
+                      <h1 class="page-header">Añadir nueva vacante de trabajo</h1>
                     </div>
                     <!-- /.col-lg-12 -->
                  </div> 
@@ -17,11 +17,11 @@
                  <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "COMPANYNAME">Company Name:</label>
+                      "COMPANYNAME">Nombre :</label>
 
                       <div class="col-md-8">
                         <select class="form-control input-sm" id="COMPANYID" name="COMPANYID">
-                          <option value="None">Select</option>
+                          <option value="None">Elegir</option>
                           <?php 
                             $sql ="Select * From tblcompany";
                             $mydb->setQuery($sql);
@@ -40,18 +40,18 @@
                      <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "CATEGORY">Category :</label>
+                      "CATEGORY">Categoria :</label>
 
                       <div class="col-md-8">
-                        <select class="form-control input-sm" id="CATEGORY" name="CATEGORY">
-                          <option value="None">Select</option>
+                        <select class="form-control input-sm" id="CATEGORYID" name="CATEGORYID">
+                          <option value="None">Elegir</option>
                           <?php 
                             $sql ="Select * From tblcategory";
                             $mydb->setQuery($sql);
                             $res  = $mydb->loadResultList();
                             foreach ($res as $row) {
                               # code...
-                              echo '<option value='.$row->CATEGORY.'>'.$row->CATEGORY.'</option>';
+                              echo '<option value='.$row->CATEGORYID.'>'.$row->CATEGORY.'</option>';
                             }
 
                           ?>
@@ -62,9 +62,9 @@
                   <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "OCCUPATIONTITLE">Occupation Title:</label> 
+                      "OCCUPATIONTITLE">Titulo de la Ocupacion :</label> 
                       <div class="col-md-8">
-                         <input class="form-control input-sm" id="OCCUPATIONTITLE" name="OCCUPATIONTITLE" placeholder="Occupation Title"   autocomplete="none"/> 
+                         <input class="form-control input-sm" id="OCCUPATIONTITLE" name="OCCUPATIONTITLE" placeholder="Titulo de la Ocupacion"   autocomplete="none"/> 
                       </div>
                     </div>
                   </div>  
@@ -72,9 +72,9 @@
                     <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "REQ_NO_EMPLOYEES">Required no. of Employees:</label> 
+                      "REQ_NO_EMPLOYEES">Numero de requeridos :</label> 
                       <div class="col-md-8">
-                         <input class="form-control input-sm" id="REQ_NO_EMPLOYEES" name="REQ_NO_EMPLOYEES" placeholder="Required no. of Employees"   autocomplete="none"/> 
+                         <input class="form-control input-sm" id="REQ_NO_EMPLOYEES" name="REQ_NO_EMPLOYEES" placeholder="Numero de requeridos"   autocomplete="none"/> 
                       </div>
                     </div>
                   </div>  
@@ -82,9 +82,9 @@
                   <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "SALARIES">Salary:</label> 
+                      "SALARIES">Salario :</label> 
                       <div class="col-md-8">
-                         <input class="form-control input-sm" id="SALARIES" name="SALARIES" placeholder="Salary"   autocomplete="none"/> 
+                         <input class="form-control input-sm" id="SALARIES" name="SALARIES" placeholder="Salario"   autocomplete="none"/> 
                       </div>
                     </div>
                   </div>  
@@ -92,9 +92,9 @@
                   <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "DURATION_EMPLOYEMENT">Duration of Employment:</label> 
+                      "DURATION_EMPLOYEMENT">Duracion del Empleo :</label> 
                       <div class="col-md-8">
-                         <input class="form-control input-sm" id="DURATION_EMPLOYEMENT" name="DURATION_EMPLOYEMENT" placeholder="Duration of Employment"   autocomplete="none"/> 
+                         <input class="form-control input-sm" id="DURATION_EMPLOYEMENT" name="DURATION_EMPLOYEMENT" placeholder="Duracion del Empleo"   autocomplete="none"/> 
                       </div>
                     </div>
                   </div>
@@ -102,9 +102,9 @@
                   <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "QUALIFICATION_WORKEXPERIENCE">Qualification/Work Experience:</label> 
+                      "QUALIFICATION_WORKEXPERIENCE">Cualificación / Experiencia laboral :</label> 
                       <div class="col-md-8">
-                        <textarea class="form-control input-sm" id="QUALIFICATION_WORKEXPERIENCE" name="QUALIFICATION_WORKEXPERIENCE" placeholder="Qualification/Work Experience"   autocomplete="none"></textarea> 
+                        <textarea class="form-control input-sm" id="QUALIFICATION_WORKEXPERIENCE" name="QUALIFICATION_WORKEXPERIENCE" placeholder="Cualificación / Experiencia laboral"   autocomplete="none"></textarea> 
                       </div>
                     </div>
                   </div> 
@@ -112,9 +112,9 @@
                   <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "JOBDESCRIPTION">Job Description:</label> 
+                      "JOBDESCRIPTION">Descripcion del Trabajo :</label> 
                       <div class="col-md-8">
-                        <textarea class="form-control input-sm" id="JOBDESCRIPTION" name="JOBDESCRIPTION" placeholder="Job Description"   autocomplete="none"></textarea> 
+                        <textarea class="form-control input-sm" id="JOBDESCRIPTION" name="JOBDESCRIPTION" placeholder="Descripcion del Trabajo"   autocomplete="none"></textarea> 
                       </div>
                     </div>
                   </div>  
@@ -122,13 +122,13 @@
                  <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "PREFEREDSEX">Prefered Sex:</label> 
+                      "PREFEREDSEX">Sexo :</label> 
                       <div class="col-md-8">
                           <select class="form-control input-sm" id="PREFEREDSEX" name="PREFEREDSEX">
-                          <option value="None">Select</option>
-                           <option>Male</option>
-                           <option>Female</option>
-                           <option>Male/Female</option>
+                          <option value="None">Elegir</option>
+                           <option>Masculino</option>
+                           <option>Femenino</option>
+                           <option>Masculino/Femenino</option>
                         </select>
                       </div>
                     </div>
@@ -137,12 +137,35 @@
                   <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "SECTOR_VACANCY">Sector of Vacancy:</label> 
+                      "SECTOR_VACANCY">Sector del Vacante:</label> 
                       <div class="col-md-8">
-                        <textarea class="form-control input-sm" id="SECTOR_VACANCY" name="SECTOR_VACANCY" placeholder="Sector of Vacancy"   autocomplete="none"></textarea> 
+                        <textarea class="form-control input-sm" id="SECTOR_VACANCY" name="SECTOR_VACANCY" placeholder="Sector del Vacante"   autocomplete="none"></textarea> 
                       </div>
                     </div>
                   </div>   
+
+                  <div class="form-group">
+                    <div class="col-md-8">
+                      <label class="col-md-4 control-label" for=
+                      "JOBSTATUS">Estado del Trabajo :</label> 
+                      <div class="col-md-8">
+                        <textarea class="form-control input-sm" id="JOBSTATUS" name="JOBSTATUS" placeholder="Estado del Trabajo"   autocomplete="none"></textarea> 
+                      </div>
+                    </div>
+                  </div> 
+                <div class="form-group">
+                         <div class="col-md-8">
+                          <label class="col-md-4 control-label" for=
+                                "DATEPOSTED">Fecha de Publicacion :</label> 
+                              <div class="col-md-8">
+                                    <div class="input-group date  " data-provide="datepicker" data-date="2012-12-21T15:25:00Z">
+                                   <input type="input" class="form-control input-sm date_picker" id="DATEPOSTED" name="DATEPOSTED" placeholder="mm/dd/yyyy"   autocomplete="false"/> 
+                                     <span class="input-group-addon"><i class="fa fa-th"></i></span>
+                              </div>
+                            </div>
+                        </div>
+                </div>  
+  
                   
                   <div class="form-group">
                     <div class="col-md-8">

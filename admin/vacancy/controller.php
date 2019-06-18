@@ -28,14 +28,16 @@ switch ($action) {
 		if(isset($_POST['save'])){
  // `COMPANYID`, `OCCUPATIONTITLE`, `REQ_NO_EMPLOYEES`, `SALARIES`, `DURATION_EMPLOYEMENT`, `QUALIFICATION_WORKEXPERIENCE`, `JOBDESCRIPTION`, `PREFEREDSEX`, `SECTOR_VACANCY`
  
-		if ( $_POST['COMPANYID'] == "None") {
+		if ( $_POST['COMPANYID'] == "None" || $_POST['CATEGORYID'] == "None") {
 			$messageStats = false;
 			message("All field is required!","error");
 			redirect('index.php?view=add');
 		}else{	
+
+			@$dateposted = date_format(date_create($_POST['DATEPOSTED']),'Y-m-d');
 			$job = New Jobs();
 			$job->COMPANYID							= $_POST['COMPANYID']; 
-			$job->CATEGORY							= $_POST['CATEGORY']; 
+			$job->CATEGORYID						= $_POST['CATEGORYID']; 
 			$job->OCCUPATIONTITLE					= $_POST['OCCUPATIONTITLE'];
 			$job->REQ_NO_EMPLOYEES					= $_POST['REQ_NO_EMPLOYEES'];
 			$job->SALARIES							= $_POST['SALARIES'];
@@ -44,10 +46,13 @@ switch ($action) {
 			$job->JOBDESCRIPTION					= $_POST['JOBDESCRIPTION'];
 			$job->PREFEREDSEX						= $_POST['PREFEREDSEX'];
 			$job->SECTOR_VACANCY					= $_POST['SECTOR_VACANCY']; 
-			$job->DATEPOSTED						= date('Y-m-d H:i');
+			$job->JOBSTATUS							= $_POST['JOBSTATUS']; 
+			$job->DATEPOSTED						= @$dateposted;
 			$job->create();
 
-			message("New Job Vacancy created successfully!", "success");
+			message("Nuevo vacante de trabajo exitosamente!", "success");
+			
+
 			redirect("index.php");
 			
 		}
@@ -57,14 +62,16 @@ switch ($action) {
 
 	function doEdit(){
 		if(isset($_POST['save'])){
-			if ( $_POST['COMPANYID'] == "None") {
+			if ( $_POST['COMPANYID'] == "None" || $_POST['CATEGORYID'] == "None") {
 				$messageStats = false;
 				message("All field is required!","error");
 				redirect('index.php?view=add');
 			}else{	
+
+				@$dateposted = date_format(date_create($_POST['DATEPOSTED']),'Y-m-d');
 				$job = New Jobs();
 				$job->COMPANYID							= $_POST['COMPANYID']; 
-				$job->CATEGORY							= $_POST['CATEGORY']; 
+				$job->CATEGORYID						= $_POST['CATEGORYID']; 
 				$job->OCCUPATIONTITLE					= $_POST['OCCUPATIONTITLE'];
 				$job->REQ_NO_EMPLOYEES					= $_POST['REQ_NO_EMPLOYEES'];
 				$job->SALARIES							= $_POST['SALARIES'];
@@ -72,7 +79,9 @@ switch ($action) {
 				$job->QUALIFICATION_WORKEXPERIENCE		= $_POST['QUALIFICATION_WORKEXPERIENCE'];
 				$job->JOBDESCRIPTION					= $_POST['JOBDESCRIPTION'];
 				$job->PREFEREDSEX						= $_POST['PREFEREDSEX'];
-				$job->SECTOR_VACANCY					= $_POST['SECTOR_VACANCY']; 
+				$job->SECTOR_VACANCY					= $_POST['SECTOR_VACANCY'];
+				$job->JOBSTATUS							= $_POST['JOBSTATUS'];
+				$job->DATEPOSTED						= @$dateposted;	  
 				$job->update($_POST['JOBID']);
 
 				message("Job Vacancy has been updated!", "success");

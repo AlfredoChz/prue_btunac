@@ -22,7 +22,7 @@ if (isset($_SESSION['APPLICANTID'])) {
 ?>
     <div class="col-sm-12">
                    <div class="row">
-                    <h2 class=" " >Job Details</h2>
+                    <h2 class=" " >Detalles de la Oferta de Empleo</h2>
                      <div class="panel">
                          <div class="panel-header">
                               <div style="border-bottom: 1px solid #ddd;padding: 10px;font-size: 25px;font-weight: bold;color: #000;margin-bottom: 5px;"><a href="<?php echo web_root.'index.php?q=viewjob&search='.$result->JOBID;?>"><?php echo $result->OCCUPATIONTITLE ;?></a> 

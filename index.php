@@ -4,7 +4,7 @@ $content='home.php';
 $view = (isset($_GET['q']) && $_GET['q'] != '') ? $_GET['q'] : '';
 switch ($view) {
 	case 'apply' :
-        $title="Submit Application";
+        $title="Enviar Postulacion";
 		$content='applicationform.php';
 		break;
 	case 'login' :
@@ -24,7 +24,7 @@ switch ($view) {
 		$content='category.php';
 		break;
 	case 'viewjob' :
-        $title="Job Details";
+        $title="Detalles del Empleo";
 		$content='viewjob.php';
 		break;
 	case 'success' :

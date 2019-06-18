@@ -17,6 +17,8 @@ switch ($action) {
 
 function doSubmitApplication() { 
 	global $mydb;   
+	global $mydbuser;
+
 		$jobid  = $_GET['JOBID'];
 		
 
@@ -36,24 +38,29 @@ function doSubmitApplication() {
 			
 			if (isset($_SESSION['APPLICANTID'])) {
 
-				$sql = "INSERT INTO `tblattachmentfile` (FILEID,`USERATTACHMENTID`, `FILE_NAME`, `FILE_LOCATION`, `JOBID`) 
-				VALUES ('". date('Y').$fileid->AUTO."','{$_SESSION['APPLICANTID']}','Resume','{$location}','{$jobid}')";
+				$sql = "INSERT INTO `tblattachmentfile` (`USERAPPLICANTID`, `FILE_NAME`, `FILE_LOCATION`, `JOBID`) 
+				VALUES ('{$_SESSION['APPLICANTID']}','CV','{$location}','{$jobid}')";
 				$mydb->setQuery($sql); 
 				$res = $mydb->executeQuery(); 
 
-				doUpdate($jobid,$fileid->AUTO);
+				$lastfile=$autonum->find_ultimofile();
+
+				doUpdate($jobid,$lastfile);
+
 				
 			}else{
 				 
-				$sql = "INSERT INTO `tblattachmentfile` (FILEID,`USERATTACHMENTID`, `FILE_NAME`, `FILE_LOCATION`, `JOBID`) 
-				VALUES ('". date('Y').$fileid->AUTO."','". date('Y').$applicantid->AUTO."','Resume','{$location}','{$jobid}')";
+				$sql = "INSERT INTO `tblattachmentfile` (`USERATTACHMENTID`, `FILE_NAME`, `FILE_LOCATION`, `JOBID`) 
+				VALUES ('". date('Y').$applicantid->AUTO."','CV','{$location}','{$jobid}')";
 				$mydb->setQuery($sql); 
 				$res = $mydb->executeQuery(); 
 
 				doInsert($jobid,$fileid->AUTO); 
 
-				$autonum = New Autonumber();
-				$autonum->auto_update('APPLICANT');
+				//$autonum = New Autonumber();
+				//$autonum->auto_update('APPLICANT');
+
+				echo "adios";
 			}
 		}
 
@@ -61,25 +68,28 @@ function doSubmitApplication() {
 	    $autonum->auto_update('FILEID'); 
 	 
 }
+
+/* insertar usuario y estudiante */
 function doInsert($jobid=0,$fileid=0) {
 	if (isset($_POST['submit'])) {  
 	global $mydb; 
+	global $mydbusu;
 
 			$birthdate =  $_POST['year'].'-'.$_POST['month'].'-'.$_POST['day'];
 
 			$age = date_diff(date_create($birthdate),date_create('today'))->y;
 
-			if ($age < 20){
-			message("Invalid age. 20 years old and above is allowed.", "error");
+			if ($age < 16){
+			message("Invalid age. 16 years old and above is allowed.", "error");
 			redirect("index.php?q=apply&view=personalinfo&job=".$jobid);
 
 			}else{
 
-			$autonum = New Autonumber();
-			$auto = $autonum->set_autonumber('APPLICANT');
+			//$autonum = New Autonumber();
+			//$auto = $autonum->set_autonumber('APPLICANT');
 			 
 			$applicant =New Applicants();
-			$applicant->APPLICANTID = date('Y').$auto->AUTO;
+			//$applicant->APPLICANTID = date('Y').$auto->AUTO;
 			$applicant->FNAME = $_POST['FNAME'];
 			$applicant->LNAME = $_POST['LNAME'];
 			$applicant->MNAME = $_POST['MNAME'];
@@ -139,37 +149,48 @@ function doUpdate($jobid=0,$fileid=0) {
 			$jobreg->COMPANYID = $result->COMPANYID;
 			$jobreg->JOBID     = $result->JOBID;
 			$jobreg->APPLICANTID = $appl->APPLICANTID;
-			$jobreg->APPLICANT   = $appl->FNAME . ' ' . $appl->LNAME;
 			$jobreg->REGISTRATIONDATE = date('Y-m-d');
-			$jobreg->FILEID = date('Y').$fileid;
-			$jobreg->REMARKS = 'Pending';
+			$jobreg->FILEID = $fileid;
+			$jobreg->REMARKS = 'Pendiente';
 			$jobreg->DATETIMEAPPROVED = date('Y-m-d H:i');
 			$jobreg->create();
 
   
-			message("Your application already submitted. Please wait for the company confirmation if your are qualified to this job.","success");
+			message("Tu postulacion ha sido enviada. Espere a que la empresa confirme si usted esta calificado para el empleo.","success");
 			redirect("index.php?q=success&job=".$result->JOBID);
  
 	}
 }
+
+// METODO PARA REGITRAR USUARIO
 function doRegister(){
 	global $mydb;
+	global $mydbuser;
 	if (isset($_POST['btnRegister'])) { 
 			$birthdate =  $_POST['year'].'-'.$_POST['month'].'-'.$_POST['day'];
 
 			$age = date_diff(date_create($birthdate),date_create('today'))->y;
 
-			if ($age < 20){
-			message("Invalid age. 20 years old and above is allowed.", "error");
-			redirect("index.php?q=register");
+			if ($age < 18){
+
+				message("Año invalido. Debe tener mas de 18 años.", "error");
+				redirect("index.php?q=register");
 
 			}else{
 
 			$autonum = New Autonumber();
 			$auto = $autonum->set_autonumber('APPLICANT');
 			 
+
+			$user = New User();
+			$user->FULLNAME = $_POST['FNAME'];
+			$user->USERNAME = $_POST['USERNAME'];
+			$user->PASS = sha1($_POST['PASS']);
+			$user->TYPEUSERID = '3'; 
+		    $user->create();
+
 			$applicant =New Applicants();
-			$applicant->APPLICANTID = date('Y').$auto->AUTO;
+			//$applicant->APPLICANTID = date('Y').$auto->AUTO;
 			$applicant->FNAME = $_POST['FNAME'];
 			$applicant->LNAME = $_POST['LNAME'];
 			$applicant->MNAME = $_POST['MNAME'];
@@ -179,20 +200,20 @@ function doRegister(){
 			$applicant->BIRTHDATE = $birthdate;
 			$applicant->BIRTHPLACE = $_POST['BIRTHPLACE'];
 			$applicant->AGE = $age;
-			$applicant->USERNAME = $_POST['USERNAME'];
-			$applicant->PASS = sha1($_POST['PASS']);
 			$applicant->EMAILADDRESS = $_POST['EMAILADDRESS'];
 			$applicant->CONTACTNO = $_POST['TELNO'];
 			$applicant->DEGREE = $_POST['DEGREE'];
+			/**/
+			//$applicant->NATIONALID = $_POST['NATIONALID'];
+			$applicant->USERID = $user->find_ultimouser();
+			$applicant->ESCUELAID =$_POST['ESCUELAID'];
+			/**/
 			$applicant->create();
 
+			//$autonum = New Autonumber();
+			//$autonum->auto_update('APPLICANT');
 
- 
-			$autonum = New Autonumber();
-			$autonum->auto_update('APPLICANT');
-
-
-			message("You are successfully registered to the site. You can login now!","success");
+			message("Registro de nuevo usuario correcto.","success");
 			redirect("index.php?q=success");
 
 			
