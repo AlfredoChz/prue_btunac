@@ -9,7 +9,7 @@
 
                 <div class="row">
                    <div class="col-lg-12">
-                      <h1 class="page-header">Add New Company</h1>
+                      <h1 class="page-header">Añadir nueva empresa</h1>
                     </div>
                     <!-- /.col-lg-12 -->
                  </div> 
@@ -17,7 +17,7 @@
                   <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "COMPANYNAME">Company Name:</label>
+                      "COMPANYNAME">Nombre:</label>
 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="COMPANYNAME" name="COMPANYNAME" placeholder=
@@ -29,7 +29,7 @@
                   <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "COMPANYADDRESS">Company Address:</label> 
+                      "COMPANYADDRESS">Direccion:</label> 
                       <div class="col-md-8">
                         <textarea class="form-control input-sm" id="COMPANYADDRESS" name="COMPANYADDRESS" placeholder=
                             "Company Address" type="text" value="" required  onkeyup="javascript:capitalize(this.id, this.value);" autocomplete="off"></textarea>
@@ -41,14 +41,81 @@
                   <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "COMPANYCONTACTNO">Company Contact No.:</label>
+                      "COMPANYCONTACTNO">Numero :</label>
 
                       <div class="col-md-8">
-                         <input class="form-control input-sm" id="COMPANYCONTACTNO" name="COMPANYCONTACTNO" placeholder=
-                            "Company Contact No." type="text" value="" autocomplete="none">
+                         <input class="form-control input-sm" id="COMPANYCONTACT" name="COMPANYCONTACT" placeholder=
+                            "Numero de la empresa" type="text" value="" autocomplete="none">
                       </div>
                     </div>
                   </div>  
+                  <div class="form-group">
+                    <div class="col-md-8">
+                      <label class="col-md-4 control-label" for=
+                      "COMPANYNAME">RUC :</label>
+
+                      <div class="col-md-8">
+                         <input class="form-control input-sm" id="COMPANYRUC" name="COMPANYRUC" placeholder=
+                            "RUC de la empresa" type="text" value="" autocomplete="none">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-md-8">
+                      <label class="col-md-4 control-label" for=
+                      "COMPANYNAME">Pagina Web :</label>
+
+                      <div class="col-md-8">
+                         <input class="form-control input-sm" id="COMPANYWEB" name="COMPANYWEB" placeholder=
+                            "Pagina Web de la empresa" type="text" value="" autocomplete="none">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-md-8">
+                      <label class="col-md-4 control-label" for=
+                      "COMPANYNAME">Descripcion :</label>
+
+                      <div class="col-md-8">
+                         <input class="form-control input-sm" id="COMPANYDESCRIPCION" name="COMPANYDESCRIPCION" placeholder=
+                            "Descripcion de la empresa" type="text" value="" autocomplete="none">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-md-8">
+                      <label class="col-md-4 control-label" for=
+                      "COMPANYNAME">Correo :</label>
+
+                      <div class="col-md-8">
+                         <input class="form-control input-sm" id="COMPANYEMAIL" name="COMPANYEMAIL" placeholder=
+                            "RUC de la empresa" type="text" value="" autocomplete="none">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-md-8">
+                      <label class="col-md-4 control-label" for=
+                      "COMPANYNAME">Correo del CV:</label>
+
+                      <div class="col-md-8">
+                         <input class="form-control input-sm" id="COMPANYEMAILCV" name="COMPANYEMAILCV" placeholder=
+                            "Correo del CV " type="text" value="" autocomplete="none">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-md-8">
+                      <label class="col-md-4 control-label" for=
+                      "COMPANYSTATUS">Estado :</label>
+
+                      <div class="col-md-8">
+                         <input class="form-control input-sm" id="COMPANYSTATUS" name="COMPANYSTATUS" placeholder=
+                            "RUC de la empresa" type="text" value="" autocomplete="none">
+                      </div>
+                    </div>
+                  </div>
+
 
                   <!--  <div class="form-group">
                     <div class="col-md-8">
@@ -69,7 +136,7 @@
                       "idno"></label>  
 
                       <div class="col-md-8">
-                         <button class="btn btn-primary btn-sm" name="save" type="submit" ><span class="fa fa-save fw-fa"></span> Save</button>
+                         <button class="btn btn-primary btn-sm" name="save" type="submit" ><span class="fa fa-save fw-fa"></span> Guardar</button>
                       <!-- <a href="index.php" class="btn btn-info"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<strong>Back</strong></a> -->
                      
                      </div>

@@ -7,6 +7,12 @@ require_once ("../include/initialize.php");
 $action = (isset($_GET['action']) && $_GET['action'] != '') ? $_GET['action'] : '';
 
 switch ($action) {
+
+	case 'approve':
+
+		doApprove();
+		break;
+
 	case 'add' :
 	doInsert();
 	break;
@@ -24,6 +30,13 @@ switch ($action) {
 	break;
 
  
+	}
+
+	function doApprove(){
+
+		echo 'hola';
+
+
 	}
 
 	function doEdit(){

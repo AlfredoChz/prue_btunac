@@ -17,6 +17,11 @@
 				</div>
 			</div>
 
+			<?php
+			//require_once ("include/initialize.php");
+			//$user = New User();
+			//echo $user->find_ultimouser();
+			?>
 			<div class="form-group">
 				<div class="col-md-8">
 					<label class="col-md-4 control-label" for=
@@ -215,6 +220,22 @@
 			    </div>
 			  </div>
 			</div> 
+
+			<div class="form-group">
+			  <div class="col-md-8">
+			    <label class="col-md-4 control-label" for=
+			    "ESCUELAID">Escuela:</label>
+
+			    <div class="col-md-8">
+			      <select class="form-control input-sm" name="ESCUELAID" id="ESCUELAID">
+			          <option value="none" >Seleccionar</option>
+			          <option value="1">Ingienería de Sistemas</option>
+			          <option value="2">Ingienería Industrial</option>
+			      </select> 
+			    </div>
+			  </div>
+			</div>
+
 			<div class="form-group">
 			  <div class="col-md-8">
 			    <label class="col-md-4 control-label" for=

@@ -3,6 +3,18 @@ require_once(LIB_PATH.DS.'database.php');
 class Autonumber {
 	protected static  $tblname = "tblautonumbers";
 
+	public function find_ultimofile(){
+
+		global $mydb;
+
+		$mydb->setQuery("SELECT * FROM tblattachmentfile WHERE FILEID=(SELECT MAX(FILEID) FROM tblattachmentfile)");
+
+		$file_found = $mydb->loadSingleResult();
+
+		return $file_found->FILEID;
+
+	}
+
 	function dbfields () {
 		global $mydb;
 		return $mydb->getfieldsononetable(self::$tblname);

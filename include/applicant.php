@@ -8,11 +8,13 @@ class Applicants {
 		return $mydb->getfieldsononetable(self::$tblname);
 
 	}
+
 	function listofapplicant(){
 		global $mydb;
 		$mydb->setQuery("SELECT * FROM ".self::$tblname);
 		return $cur;
 	}
+
 	function find_applicant($id="",$name=""){
 		global $mydb;
 		$mydb->setQuery("SELECT * FROM ".self::$tblname." 
@@ -45,9 +47,19 @@ class Applicants {
 			$cur = $mydb->loadSingleResult();
 			return $cur;
 	}
+
+	/* login */
 	function applicantAuthentication($U_USERNAME,$h_pass){
 		global $mydb;
-		$mydb->setQuery("SELECT * FROM `tblapplicants` WHERE `USERNAME`='".$U_USERNAME."' AND `PASS`='".$h_pass."'");
+		//$mydb->setQuery("SELECT * FROM `tblapplicants` WHERE `USERNAME`='".$U_USERNAME."' AND `PASS`='".$h_pass."'");
+		
+		$mydb->setQuery("SELECT * FROM `tblapplicants` as a inner join `tblusers` as u on a.`USERID`=u.`USERID` WHERE u.`USERNAME`='".$U_USERNAME."' AND u.`PASS`='".$h_pass."'");
+		/*
+		SELECT u.USERID,u.PASS,a.APPLICANTID FROM `tblapplicants` as a  
+		inner join `tblusers` as u  
+		on a.USERID=u.USERID;
+		*/
+
 		$cur = $mydb->executeQuery();
 		if($cur==false){
 			die(mysql_error());
@@ -64,7 +76,8 @@ class Applicants {
 	}
 
 	 
-	/*---Instantiation of Object dynamically---*/
+
+
 	static function instantiate($record) {
 		$object = new self;
 
@@ -76,13 +89,13 @@ class Applicants {
 		return $object;
 	}
 	
-	
-	/*--Cleaning the raw data before submitting to Database--*/
+
 	private function has_attribute($attribute) {
 	  // We don't care about the value, we just want to know if the key exists
 	  // Will return true or false
 	  return array_key_exists($attribute, $this->attributes());
 	}
+
 
 	protected function attributes() { 
 		// return an array of attribute names and their values
@@ -95,12 +108,14 @@ class Applicants {
 	  }
 	  return $attributes;
 	}
+
+
 	
 	protected function sanitized_attributes() {
 	  global $mydb;
 	  $clean_attributes = array();
-	  // sanitize the values before submitting
-	  // Note: does not alter the actual value of each attribute
+	  // desinfectar los valores antes de enviar
+	  // Nota: no altera el valor real de cada atributo
 	  foreach($this->attributes() as $key => $value){
 	    $clean_attributes[$key] = $mydb->escape_value($value);
 	  }
@@ -108,13 +123,14 @@ class Applicants {
 	}
 	
 	
-	/*--Create,Update and Delete methods--*/
+
 	public function save() {
 	  // A new record won't have an id yet.
 	  return isset($this->id) ? $this->update() : $this->create();
 	}
 	
 	public function create() {
+		
 		global $mydb;
 		// Don't forget your SQL syntax and good habits:
 		// - INSERT INTO table (key, key) VALUES ('value', 'value')

@@ -5,7 +5,7 @@
 ?>
 	<div class="row">
        	 <div class="col-lg-12">
-            <h1 class="page-header">List of Companies  <a href="index.php?view=add" class="btn btn-primary btn-xs  ">  <i class="fa fa-plus-circle fw-fa"></i> Add Company</a>  </h1>
+            <h1 class="page-header">Lista de Empresas  <a href="index.php?view=add" class="btn btn-primary btn-xs  ">  <i class="fa fa-plus-circle fw-fa"></i> Añádir Empresas </a>  </h1>
        		</div>
         	<!-- /.col-lg-12 -->
    		 </div>
@@ -16,9 +16,15 @@
 				  <thead>
 				  	<tr>
 				  		<!-- <th>No.</th> -->
-				  		<th>Name</th> 
-				  		<th>Address</th> 
-				  		<th>Contact No.</th> 
+				  		<th>Nombre</th> 
+				  		<th>Direccion</th> 
+				  		<th>Numero</th> 
+				  		<th>RUC</th>
+				  		<th>Pagina web</th> 
+				  		<th>Descripcion</th> 
+				  		<th>Email</th>
+				  		<th>Email CV</th>    
+				  		<th>Estado</th>   
 				  		 <th width="10%" align="center">Action</th>
 				  	</tr>	
 				  </thead> 
@@ -34,7 +40,15 @@
 				  		// 		' . $result->CATEGORIES.'</a></td>';
 				  			echo '<td>' . $result->COMPANYNAME.'</td>';
 				  			echo '<td>' . $result->COMPANYADDRESS.'</td>';
-				  			echo '<td>' . $result->COMPANYCONTACTNO.'</td>';
+				  			echo '<td>' . $result->COMPANYCONTACT.'</td>';
+				  			echo '<td>' . $result->COMPANYRUC.'</td>';
+				  			echo '<td>' . $result->COMPANYWEB.'</td>';
+							echo '<td>' . $result->COMPANYDESCRIPCION.'</td>';
+				     		echo '<td>' . $result->COMPANYEMAIL.'</td>';
+				  			echo '<td>' . $result->COMPANYEMAILCV.'</td>';
+  							echo '<td>' . $result->COMPANYSTATUS.'</td>';
+
+
 				  		echo '<td align="center"><a title="Edit" href="index.php?view=edit&id='.$result->COMPANYID.'" class="btn btn-primary btn-xs  ">  <span class="fa fa-edit fw-fa"></a>
 				  		     <a title="Delete" href="controller.php?action=delete&id='.$result->COMPANYID.'" class="btn btn-danger btn-xs  ">  <span class="fa  fa-trash-o fw-fa "></a></td>';
 				  		// echo '<td></td>';

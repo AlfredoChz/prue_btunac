@@ -31,7 +31,7 @@ class User {
 		 	$_SESSION['ROLE'] 			= 'Programmer';
 		 	return true;
 		}else{
-			$mydb->setQuery("SELECT * FROM `tblusers` WHERE `USERNAME` = '". $USERNAME ."' and `PASS` = '". $h_pass ."'");
+			$mydb->setQuery("SELECT * FROM `tblusers` WHERE `USERNAME` = '". $USERNAME ."' and `PASS` = '". $h_pass ."' and TYPEUSERID!=3");
 			$cur = $mydb->executeQuery();
 			if($cur==false){
 				die(mysql_error());
@@ -43,8 +43,8 @@ class User {
 			 	$_SESSION['FULLNAME']      	= $user_found->FULLNAME;
 			 	$_SESSION['USERNAME'] 		= $user_found->USERNAME;
 			 	$_SESSION['PASS'] 			= $user_found->PASS;
-			 	$_SESSION['ROLE'] 			= $user_found->ROLE;
-			 	$_SESSION['PICLOCATION'] 	= $user_found->PICLOCATION;
+			 	$_SESSION['ROLE']	    = $user_found->TYPEUSERID;
+		
 			    return true;
 			 }else{
 			 	return false;
@@ -143,6 +143,17 @@ class User {
 	  $mydb->setQuery($sql);
 	 	if(!$mydb->executeQuery()) return false; 	
 		
+	}
+	public function find_ultimouser(){
+
+		global $mydb;
+
+		$mydb->setQuery("SELECT * FROM tblusers WHERE USERID=(SELECT MAX(USERID) FROM tblusers)");
+		//$cur = $mydb->executeQuery();
+		$user_found = $mydb->loadSingleResult();
+
+		return $user_found->USERID;
+
 	}
 
 	public function delete($id=0) {

@@ -179,31 +179,12 @@ switch ($action) {
 } 
 	function doDelete(){
 		
-		// if (isset($_POST['selector'])==''){
-		// message("Select the records first before you delete!","error");
-		// redirect('index.php');
-		// }else{
-
-		// $id = $_POST['selector'];
-		// $key = count($id);
-
-		// for($i=0;$i<$key;$i++){
-
-		// 	$subj = New Student();
-		// 	$subj->delete($id[$i]);
-
-		
-				$id = 	$_GET['id'];
-
-				$emp = New Employee();
-	 		 	$emp->delete($id);
+		$id = 	$_GET['id'];
+		$emp = New Employee();
+	 	$emp->delete($id);
 			 
-		
-		// }
-			message("Employee(s) already Deleted!","success");
-			redirect('index.php');
-		// }
-
+		message("Postulacion eliminada","success");
+		redirect('index.php');	
 		
 	}
 
@@ -268,45 +249,54 @@ switch ($action) {
 			}
 			 
 		}
-function doApproved(){
-global $mydb;
-	if (isset($_POST['submit'])) {
-		# code...
-		$id = $_POST['JOBREGID'];
-		$applicantid = $_POST['APPLICANTID'];
+	function doApproved(){
 
-		$remarks = $_POST['REMARKS'];
-		$sql="UPDATE `tbljobregistration` SET `REMARKS`='{$remarks}',PENDINGAPPLICATION=0,HVIEW=0,DATETIMEAPPROVED=NOW() WHERE `REGISTRATIONID`='{$id}'";
-		$mydb->setQuery($sql);
-		$cur = $mydb->executeQuery();
+		global $mydb;
 
-		if ($cur) {
-			# code...
-			$sql = "SELECT * FROM `tblfeedback` WHERE `REGISTRATIONID`='{$id}'";
+		if (isset($_POST['submit'])) {
+	
+			$id = $_POST['JOBREGID'];
+			$applicantid = $_POST['APPLICANTID'];
+
+			$remarks = $_POST['REMARKS'];
+
+			$sql="UPDATE `tbljobregistration` SET `REMARKS`='{$remarks}',PENDINGAPPLICATION=0,HVIEW=0,DATETIMEAPPROVED=NOW() WHERE `REGISTRATIONID`='{$id}'";
+
 			$mydb->setQuery($sql);
-			$res = $mydb->loadSingleResult();
-			if (isset($res)) {
-				# code...
-				$sql="UPDATE `tblfeedback` SET `FEEDBACK`='{$remarks}' WHERE `REGISTRATIONID`='{$id}'";
+			$cur = $mydb->executeQuery();
+
+			if ($cur) {
+			
+				$sql = "SELECT * FROM `tblfeedback` WHERE `REGISTRATIONID`='{$id}'";
 				$mydb->setQuery($sql);
-				$cur = $mydb->executeQuery();
+				$res = $mydb->loadSingleResult();
+
+				if (isset($res)) {
+			
+					$sql="UPDATE `tblfeedback` SET `FEEDBACK`='{$remarks}' WHERE `REGISTRATIONID`='{$id}'";
+					$mydb->setQuery($sql);
+					$cur = $mydb->executeQuery();
+
+				}else{
+
+					$sql="INSERT INTO `tblfeedback` (`APPLICANTID`, `REGISTRATIONID`,`FEEDBACK`) VALUES ('{$applicantid}','{$id}','{$remarks}')";
+					$mydb->setQuery($sql);
+					$cur = $mydb->executeQuery(); 
+
+				}
+
+				message("Mensaje Enviado al Alumno.", "success");
+				redirect("index.php?view=view&id=".$id); 
+
 			}else{
-				$sql="INSERT INTO `tblfeedback` (`APPLICANTID`, `REGISTRATIONID`,`FEEDBACK`) VALUES ('{$applicantid}','{$id}','{$remarks}')";
-				$mydb->setQuery($sql);
-				$cur = $mydb->executeQuery(); 
+
+				message("No puede ser guardado.", "error");
+				redirect("index.php?view=view&id=".$id); 
 
 			}
 
-			message("Applicant is calling for an interview.", "success");
-			redirect("index.php?view=view&id=".$id); 
-		}else{
-			message("cannot be sve.", "error");
-			redirect("index.php?view=view&id=".$id); 
 		}
-
-
 	}
-}
 
  
 ?>

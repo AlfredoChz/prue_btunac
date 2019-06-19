@@ -91,6 +91,7 @@ require_once("../include/initialize.php");
 if(isset($_POST['btnLogin'])){
   $email = trim($_POST['user_email']);
   $upass  = trim($_POST['user_pass']);
+
   $h_upass = sha1($upass);
   
    if ($email == '' OR $upass == '') {
@@ -110,20 +111,20 @@ if(isset($_POST['btnLogin'])){
         $_SESSION['ADMIN_USERID'] = $_SESSION['USERID'];
         $_SESSION['ADMIN_FULLNAME'] = $_SESSION['FULLNAME'] ;
         $_SESSION['ADMIN_USERNAME'] =$_SESSION['USERNAME'];
-        $_SESSION['ADMIN_ROLE'] = $_SESSION['ROLE'];
-        $_SESSION['ADMIN_PICLOCATION'] = $_SESSION['PICLOCATION'];
+        $_SESSION['ADMIN_ROLE'] = $_SESSION['TYPEUSERID'];
+       // $_SESSION['ADMIN_PICLOCATION'] = $_SESSION['PICLOCATION'];
 
         unset( $_SESSION['USERID'] );
         unset( $_SESSION['FULLNAME'] );
         unset( $_SESSION['USERNAME'] );
         unset( $_SESSION['PASS'] );
-        unset( $_SESSION['ROLE'] );
-        unset($_SESSION['PICLOCATION']);
+        unset( $_SESSION['TYPEUSERID'] );
+      //  unset($_SESSION['PICLOCATION']);
 
          redirect(web_root."admin/index.php");
       // } 
     }else{
-      message("Account does not exist! Please contact Administrator.", "error");
+      message("¡La cuenta no existe! Por favor, póngase en contacto con el administrador.", "error");
        redirect(web_root."admin/login.php"); 
     }
  }

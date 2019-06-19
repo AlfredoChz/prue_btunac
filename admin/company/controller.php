@@ -28,19 +28,26 @@ switch ($action) {
 		if(isset($_POST['save'])){
 
  // `COMPANYNAME`, `COMPANYADDRESS`, `COMPANYCONTACTNO`
-		if ( $_POST['COMPANYNAME'] == "" || $_POST['COMPANYADDRESS'] == "" || $_POST['COMPANYCONTACTNO'] == "" ) {
+		if ( $_POST['COMPANYNAME'] == "" || $_POST['COMPANYADDRESS'] == "" || $_POST['COMPANYCONTACT'] == "" || $_POST['COMPANYRUC'] == "" || $_POST['COMPANYWEB'] == "" || $_POST['COMPANYDESCRIPCION'] == "" || $_POST['COMPANYEMAIL'] == "" || $_POST['COMPANYEMAILCV'] == "" || $_POST['COMPANYSTATUS'] == "") {
 			$messageStats = false;
-			message("All field is required!","error");
+			message("Todo el campo es obligatorio!","error");
 			redirect('index.php?view=add');
 		}else{	
 			$company = New Company();
 			$company->COMPANYNAME		= $_POST['COMPANYNAME'];
 			$company->COMPANYADDRESS	= $_POST['COMPANYADDRESS'];
-			$company->COMPANYCONTACTNO	= $_POST['COMPANYCONTACTNO'];
+			$company->COMPANYCONTACT	= $_POST['COMPANYCONTACT'];
+			$company->COMPANYRUC	= $_POST['COMPANYRUC'];
+			$company->COMPANYWEB	= $_POST['COMPANYWEB'];
+			$company->COMPANYDESCRIPCION	= $_POST['COMPANYDESCRIPCION'];
+			$company->COMPANYEMAIL	= $_POST['COMPANYEMAIL'];
+			$company->COMPANYEMAILCV	= $_POST['COMPANYEMAILCV'];
+			$company->COMPANYSTATUS	= $_POST['COMPANYSTATUS'];
+
 			// $company->COMPANYMISSION	= $_POST['COMPANYMISSION'];
 			$company->create();
 
-			message("New company created successfully!", "success");
+			message("Nueva empresa creado exitosamente!", "success");
 			redirect("index.php");
 			
 		}
@@ -54,11 +61,17 @@ switch ($action) {
 			$company = New Company();
 			$company->COMPANYNAME		= $_POST['COMPANYNAME'];
 			$company->COMPANYADDRESS	= $_POST['COMPANYADDRESS'];
-			$company->COMPANYCONTACTNO	= $_POST['COMPANYCONTACTNO'];
+			$company->COMPANYCONTACT	= $_POST['COMPANYCONTACT'];
+			$company->COMPANYRUC	= $_POST['COMPANYRUC'];
+			$company->COMPANYWEB	= $_POST['COMPANYWEB'];
+			$company->COMPANYDESCRIPCION	= $_POST['COMPANYDESCRIPCION'];
+			$company->COMPANYEMAIL	= $_POST['COMPANYEMAIL'];
+			$company->COMPANYEMAILCV	= $_POST['COMPANYEMAILCV'];
+			$company->COMPANYSTATUS	= $_POST['COMPANYSTATUS'];
 			// $company->COMPANYMISSION	= $_POST['COMPANYMISSION'];
 			$company->update($_POST['COMPANYID']);
 
-			message("Company has been updated!", "success");
+			message("Empresa ha sido actualizado!", "success");
 			redirect("index.php");
 		}
 
@@ -76,7 +89,7 @@ switch ($action) {
 			$company = New Company();
 			$company->delete($id);
 
-			message("Company has been Deleted!","info");
+			message("Empresa ha sido eliminado!","info");
 			redirect('index.php');
 
 		// $id = $_POST['selector'];

@@ -22,7 +22,7 @@
   ?> 
            <div class="container">
              <div class="mg-available-rooms">
-                    <h5 class="mg-sec-left-title">Date Posted :  <?php echo date_format(date_create($result->DATEPOSTED),'M d, Y'); ?></h5>
+                    <h5 class="mg-sec-left-title">Fecha del Post :  <?php echo date_format(date_create($result->DATEPOSTED),'M d, Y'); ?></h5>
                         <div class="mg-avl-rooms">
                             <div class="mg-avl-room">
                                 <div class="row">

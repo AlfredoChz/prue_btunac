@@ -1,6 +1,8 @@
 <?php
 require_once(LIB_PATH.DS.'database.php');
+
 class Employee {
+
 	protected static  $tblname = "tblemployees";
 
 	function dbfields () {
@@ -158,6 +160,21 @@ class Employee {
 		
 	}
 
+	public function update2($id='') {
+	  global $mydb;
+		$attributes = $this->sanitized_attributes();
+		$attribute_pairs = array();
+		foreach($attributes as $key => $value) {
+		  $attribute_pairs[] = "{$key}='{$value}'";
+		}
+		$sql = "UPDATE ".self::$tblname." SET ";
+		$sql .= join(", ", $attribute_pairs);
+		$sql .= " WHERE USERID='". $id."'";
+	  $mydb->setQuery($sql);
+	 	if(!$mydb->executeQuery()) return false; 	
+		
+	}
+
    public function empupdate($id=0) {
 	  global $mydb;
 		$attributes = $this->sanitized_attributes();
@@ -174,16 +191,32 @@ class Employee {
 	}
 
 	public function delete($id='') {
+
 		global $mydb;
-		  $sql = "DELETE FROM ".self::$tblname;
-		  $sql .= " WHERE EMPLOYEEID='". $id."'";
-		  $sql .= " LIMIT 1 ";
-		  $mydb->setQuery($sql);
+
+		$sql = "DELETE FROM ".self::$tblname;
+		$sql .= " WHERE EMPLOYEEID='". $id."'";
+		$sql .= " LIMIT 1 ";
+
+		$mydb->setQuery($sql);
 		  
-			if(!$mydb->executeQuery()) return false; 	
+		if(!$mydb->executeQuery()) return false; 	
 	
 	}	
 
+	public function delete2($id='') {
 
+		global $mydb;
+
+		$sql = "DELETE FROM ".self::$tblname;
+		$sql .= " WHERE USERID='". $id."'";
+		$sql .= " LIMIT 1 ";
+
+		$mydb->setQuery($sql);
+		  
+		if(!$mydb->executeQuery()) return false; 	
+	
+	}	
 }
+
 ?>

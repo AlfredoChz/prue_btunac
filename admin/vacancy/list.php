@@ -5,7 +5,7 @@
 ?>
 	<div class="row">
        	 <div class="col-lg-12">
-            <h1 class="page-header">List of Vacancies  <a href="index.php?view=add" class="btn btn-primary btn-xs  ">  <i class="fa fa-plus-circle fw-fa"></i> Add Job Vacancy</a>  </h1>
+            <h1 class="page-header">Lista de Vacantes  <a href="index.php?view=add" class="btn btn-primary btn-xs  ">  <i class="fa fa-plus-circle fw-fa"></i>Añadir vacante de trabajo</a>  </h1>
        		</div>
         	<!-- /.col-lg-12 -->
    		 </div>
@@ -17,16 +17,17 @@
 				  	<tr>
 
 				  		<!-- <th>No.</th> -->
-				  		<th>Company Name</th> 
-				  		<th>Occupation Title</th> 
-				  		<th>Require no. of Employees</th> 
-				  		<th>Salaries</th> 
-				  		<th>Duration of Employment</th> 
-				  		<th>Qualification/Work experience</th> 
-				  		<th>Job Description</th> 
-				  		<th>Prefered Sex</th> 
-				  		<th>Sector of Vacancy</th> 
-				  		<th>Job Status</th> 
+				  		<th>Nombre de la Empresa</th> 
+				  		<th>Titulo de la Ocupacion</th> 
+				  		<th>Numero de requeridos</th> 
+				  		<th>Salario</th> 
+				  		<th>Duracion del Empleo</th> 
+				  		<th>Cualificación / Experiencia laboral</th> 
+				  		<th>Descripcion del Trabajo</th> 
+				  		<th>Sexo</th> 
+				  		<th>Sector del Vacante</th> 
+				  		<th>Estado del Trabajo</th>
+				  	    <th>Fecha de Publicacion</th>  
 				  		 <th width="10%" align="center">Action</th>
 				  	</tr>	
 				  </thead> 
@@ -51,6 +52,7 @@
 				  			echo '<td>' . $result->PREFEREDSEX.'</td>';
 				  			echo '<td>' . $result->SECTOR_VACANCY.'</td>';
 				  			echo '<td>' . $result->JOBSTATUS.'</td>';
+				  			echo '<td>' . $result->DATEPOSTED.'</td>';
 				  		echo '<td align="center"><a title="Edit" href="index.php?view=edit&id='.$result->JOBID.'" class="btn btn-primary btn-xs  ">  <span class="fa fa-edit fw-fa"></a>
 				  		     <a title="Delete" href="controller.php?action=delete&id='.$result->JOBID.'" class="btn btn-danger btn-xs  ">  <span class="fa  fa-trash-o fw-fa "></a></td>';
 				  		// echo '<td></td>';

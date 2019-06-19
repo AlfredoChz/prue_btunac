@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="131e4769-9675-499c-8efc-dc43d405e940" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/prueba_jobportal2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/applicants/photos/feliz.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applicant/photos/17062019065954BASE DE DATOS DISTRIBUIDAS.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applicant/photos/17062019070107BASE DE DATOS DISTRIBUIDAS.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applicant/photos/17062019070328BASE DE DATOS DISTRIBUIDAS.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applicant/photos/17062019070412BASE DE DATOS DISTRIBUIDAS.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applicant/photos/17062019071129BASE DE DATOS DISTRIBUIDAS.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applicant/photos/17062019071700BASE DE DATOS DISTRIBUIDAS.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applicant/photos/17062019071721BASE DE DATOS DISTRIBUIDAS.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applicant/photos/17062019072258BASE DE DATOS DISTRIBUIDAS.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applicant/photos/17062019082839cvusuario2.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applicant/photos/17062019103657cvusuario2.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applicant/photos/17062019104648000183_LP-2-2007-CE_MVMT-CUADRO COMPARATIVO.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applicant/photos/17062019115048EXPLICACION DEL CASO.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applicant/photos/18062019051250cvusuario2.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bolsa_trabajo_unac1.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/feliz.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/applicants/controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/applicants/controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/applicants/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/applicants/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/applicants/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/applicants/list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/applicants/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/applicants/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/category/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/category/add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/category/controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/category/controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/category/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/category/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/category/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/category/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/category/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/category/list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/company/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/company/add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/company/controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/company/controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/company/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/company/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/company/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/company/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/company/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/company/list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/theme/templates.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/theme/templates.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/user/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/user/add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/user/controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/user/controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/user/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/user/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/user/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/user/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/user/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/user/list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/user/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/user/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/vacancy/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/vacancy/add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/vacancy/controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/vacancy/controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/vacancy/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/vacancy/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/vacancy/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/vacancy/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/vacancy/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/vacancy/list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applicant/appliedjobs.php" beforeDir="false" afterPath="$PROJECT_DIR$/applicant/appliedjobs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applicant/controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/applicant/controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applicant/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/applicant/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applicant/notification.php" beforeDir="false" afterPath="$PROJECT_DIR$/applicant/notification.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applicant/viewjob.php" beforeDir="false" afterPath="$PROJECT_DIR$/applicant/viewjob.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applicationform.php" beforeDir="false" afterPath="$PROJECT_DIR$/applicationform.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/pages/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/pages/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/erisdb.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/accounts.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/accounts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/applicant.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/applicant.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/autonumbers.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/autonumbers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/employees.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/employees.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/initialize.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/initialize.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/datatables/jquery.dataTables.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/datatables/jquery.dataTables.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process.php" beforeDir="false" afterPath="$PROJECT_DIR$/process.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/viewjob.php" beforeDir="false" afterPath="$PROJECT_DIR$/viewjob.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/applicant/appliedjobs.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/applicant.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/autonumbers.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/config.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/employees.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/applicant/viewjob.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/applicant/notification.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/applicant/controller.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/applicant/index.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Conoce las</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1346" />
+    <option name="height" value="688" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="prue_btunac" type="b2602c69:ProjectViewProjectNode" />
+              <item name="prue_btunac" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="prue_btunac" type="b2602c69:ProjectViewProjectNode" />
+              <item name="prue_btunac" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="prue_btunac" type="b2602c69:ProjectViewProjectNode" />
+              <item name="prue_btunac" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="theme" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="prue_btunac" type="b2602c69:ProjectViewProjectNode" />
+              <item name="prue_btunac" type="462c0819:PsiDirectoryNode" />
+              <item name="applicant" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="prue_btunac" type="b2602c69:ProjectViewProjectNode" />
+              <item name="prue_btunac" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="prue_btunac" type="b2602c69:ProjectViewProjectNode" />
+              <item name="prue_btunac" type="462c0819:PsiDirectoryNode" />
+              <item name="theme" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dbd7d7a0-a189-42cc-b353-4b9de36a5ea7" name="Default Changelist" comment="" />
+      <created>1560876041691</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1560876041691</updated>
+      <workItem from="1560876049980" duration="24000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="135000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21722364" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="559">
+          <caret line="101" column="83" selection-start-line="101" selection-start-column="83" selection-end-line="101" selection-end-column="83" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#4;n#!!top" expanded="true" />
+            <element signature="e#3968#3974#0#HTML" expanded="true" />
+            <element signature="e#3974#3980#0#HTML" expanded="true" />
+            <element signature="e#4331#4337#0#HTML" expanded="true" />
+            <element signature="e#4337#4343#0#HTML" expanded="true" />
+            <element signature="e#4628#4634#0#HTML" expanded="true" />
+            <element signature="e#4634#4640#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#a#0;n#h4#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#a#0;n#h4#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#a#0;n#h4#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#a#0;n#h4#0;n#div#0;n#div#3;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hirring.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/theme/templates.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2040" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="16" column="41" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applicant/message.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applicant/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2550">
+          <caret line="178" column="83" selection-start-line="178" selection-start-column="83" selection-end-line="178" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/accounts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="223" column="19" selection-start-line="223" selection-start-column="19" selection-end-line="223" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/applicant.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/autonumbers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/config.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/employees.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applicant/viewjob.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applicant/notification.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applicant/controller.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applicant/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applicant/appliedjobs.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
